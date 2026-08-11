@@ -9,7 +9,7 @@ interface Props {
 
 const buildChecklistText = (area: PracticeArea) => {
   const lines = [
-    "OCHIEL MWENDWA & COMPANY ADVOCATES",
+    "O. MWENDWA & COMPANY ADVOCATES",
     "Document Checklist — " + area.title,
     "",
     "Bring or upload the following before your consultation. The more we have upfront, the more value we can deliver in your first meeting.",

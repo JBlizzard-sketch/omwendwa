@@ -79,8 +79,11 @@ const About = () => (
             const Icon = item.icon;
             return (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="rounded-lg border border-border bg-secondary/30 p-6 lg:p-8 h-full">
-                  <Icon className="h-8 w-8 text-primary mb-4" />
+                <div className="hover-lift surface-elevated h-full rounded-xl border border-border p-6 lg:p-8">
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg border border-primary/30 bg-primary/10">
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  
                   <h3 className="font-heading text-lg font-bold text-foreground">{item.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                 </div>
