@@ -83,7 +83,7 @@ const About = () => (
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg border border-primary/30 bg-primary/10">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
-                  <Icon className="h-8 w-8 text-primary mb-4" />
+                  
                   <h3 className="font-heading text-lg font-bold text-foreground">{item.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                 </div>
