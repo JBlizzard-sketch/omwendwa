@@ -29,7 +29,7 @@ const About = () => (
             Modern Law. <span className="text-gold-gradient">Real Results.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Founded in 2023, O. Mwendwa & Company Advocates is a new-generation law firm based in Nairobi, Kenya. In a rapidly evolving legal landscape, we bring fresh perspective, modern thinking, and rigorous expertise — reflecting today's realities, not outdated dogma.
+            Founded in March 2026, O. Mwendwa & Company Advocates is a new-generation law firm based in Nairobi, Kenya. In a rapidly evolving legal landscape, we bring fresh perspective, modern thinking, and rigorous expertise — reflecting today's realities, not outdated dogma.
           </p>
         </ScrollReveal>
       </div>
@@ -70,7 +70,7 @@ const About = () => (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             { icon: Zap, title: "Modern Approach", desc: "We leverage technology, data-driven insights, and contemporary legal thinking. No dusty precedent worship — just sharp, effective advocacy tailored to today's world." },
-            { icon: Scale, title: "Rigorous Expertise", desc: "Three years of dedicated practice across six core areas, supported by international training and professional networks spanning the ICC, LCIA, and beyond." },
+            { icon: Scale, title: "Rigorous Expertise", desc: "Dedicated practice across our core areas since March 2026, supported by international training and professional networks spanning the ICC, LCIA, and beyond." },
             { icon: Globe, title: "International Perspective", desc: "Our partners' international experience — from Oslo to Addis Ababa — gives us a global lens on Kenyan law. We understand how local decisions connect to international frameworks." },
             { icon: BookOpen, title: "Prevention First", desc: "We prioritise keeping clients out of disputes. Our advisory work is designed to structure your affairs correctly from the start, saving you time, money, and stress." },
             { icon: Users, title: "Client-Centric", desc: "Every client — whether a multinational or a first-time homebuyer — receives the same level of strategic attention and professional commitment. That's our promise." },

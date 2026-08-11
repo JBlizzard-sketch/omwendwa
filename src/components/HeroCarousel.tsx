@@ -15,7 +15,7 @@ const slides = [
     headline: "Fresh Thinking.",
     headlineGold: "Sharp Advocacy.",
     subheadline: "Justice for a Modern Kenya.",
-    description: "A new-generation law firm at the intersection of law, technology, and modern business. Three years of relentless, results-driven practice.",
+    description: "A new-generation law firm at the intersection of law, technology, and modern business. Founded in March 2026 for relentless, results-driven practice.",
     cta: "Book a Consultation",
     ctaLink: "/contact",
     secondaryCta: "Our Practice Areas",

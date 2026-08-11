@@ -18,10 +18,10 @@ const FirmTimeline = () => (
             <div className="h-px w-8 bg-primary/60" /> Our journey <div className="h-px w-8 bg-primary/60" />
           </div>
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Three Years, <span className="text-gold-gradient">One Direction</span>
+            From Day One, <span className="text-gold-gradient">One Direction</span>
           </h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            Young enough to question old assumptions. Disciplined enough to win on them.
+            A new firm, built deliberately. Young enough to question old assumptions, disciplined enough to win on them.
           </p>
         </div>
       </ScrollReveal>

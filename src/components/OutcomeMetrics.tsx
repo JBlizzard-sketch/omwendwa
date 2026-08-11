@@ -6,7 +6,7 @@ const metrics = [
   { icon: Banknote, value: 380, suffix: "M+", label: "KES recovered or saved", sub: "Tax, commercial & land matters" },
   { icon: FileCheck2, value: 150, suffix: "+", label: "Matters resolved", sub: "Across six practice areas" },
   { icon: Gavel, value: 42, suffix: "", label: "KRA disputes won", sub: "Tribunal & objection stage" },
-  { icon: CalendarRange, value: 3, suffix: "", label: "Years active", sub: "Founded 2023 in Nairobi" },
+  { icon: CalendarRange, value: 8, suffix: "", label: "Practice areas", sub: "Founded March 2026 in Nairobi" },
 ];
 
 const OutcomeMetrics = () => (
@@ -43,7 +43,7 @@ const OutcomeMetrics = () => (
         })}
       </div>
       <p className="mt-6 text-center text-[11px] text-muted-foreground">
-        Figures are aggregate, anonymised, and reflect engagements between 2023 and 2026.
+        Figures are aggregate, anonymised, and reflect engagements since the firm opened in March 2026.
       </p>
     </div>
   </section>

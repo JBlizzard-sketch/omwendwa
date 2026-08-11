@@ -91,7 +91,7 @@ export const caseStudies: CaseStudy[] = [
 
 
 export const firmStats = {
-  yearsExperience: 3,
+  founded: "March 2026",
   casesHandled: 150,
   successRate: 94,
   clientRetention: 92

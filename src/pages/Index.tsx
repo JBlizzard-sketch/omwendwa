@@ -142,16 +142,16 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mb-10">
               <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-                <span className="text-gold-gradient">Three Years</span> of Relentless Advocacy
+                <span className="text-gold-gradient">Since March 2026</span> — Relentless Advocacy
               </h2>
               <p className="mt-3 text-sm text-muted-foreground max-w-lg mx-auto">
-                In just three years, we've built a track record that speaks for itself — because in our firm, results aren't aspirational, they're expected.
+                From day one, we've built a track record that speaks for itself — because in our firm, results aren't aspirational, they're expected.
               </p>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {[
-              { value: firmStats.yearsExperience, label: "Years of Practice", sub: "Since 2023", suffix: "" },
+              { value: 8, label: "Practice Areas", sub: "Founded March 2026", suffix: "" },
               { value: firmStats.casesHandled, label: "Cases Handled", sub: "Across all practice areas", suffix: "+" },
               { value: firmStats.successRate, label: "Success Rate", sub: "Favourable outcomes", suffix: "%" },
               { value: firmStats.clientRetention, label: "Client Retention", sub: "Clients who return", suffix: "%" },
