@@ -23,35 +23,57 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LegalService",
-      "name": "O. Mwendwa & Company Advocates",
-      "description": "Full-service law firm in Nairobi, Kenya specialising in tax, commercial, family, succession, governance, debt recovery, private wealth and environmental & land law.",
-      "url": "https://ochielmwendwa.co.ke",
-      "telephone": "+254796759632",
-      "email": "info@ochielmwendwa.co.ke",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Uniafric House, Koinange Street, Suite 334",
-        "addressLocality": "Nairobi",
-        "addressCountry": "KE"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Kenya"
-      },
-      "priceRange": "$$",
-      "openingHours": "Mo-Fr 08:00-18:00",
-      "slogan": "Timely. Responsive. Commercially Minded. Always Professional.",
-      "foundingDate": "2026-03",
-      "founder": [
-        { "@type": "Person", "name": "Rachael Mwendwa", "jobTitle": "Managing Partner" }
-      ],
-      "employee": [
-        { "@type": "Person", "name": "Rachael Mwendwa", "jobTitle": "Managing Partner" }
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/company/o-mwendwa-advocates",
-        "https://www.google.com/maps/place/Uniafric+House+Nairobi"
+      "@graph": [
+        {
+          "@type": ["LegalService", "Organization"],
+          "@id": "https://ochielmwendwa.co.ke/#organization",
+          "name": "O. Mwendwa & Company Advocates",
+          "legalName": "O. Mwendwa & Company Advocates",
+          "alternateName": "O. Mwendwa Advocates",
+          "description": "Full-service law firm in Nairobi, Kenya, founded in March 2026, specialising in tax, commercial, family, succession, governance, debt recovery, private wealth and environmental & land law.",
+          "url": "https://ochielmwendwa.co.ke",
+          "telephone": "+254796759632",
+          "email": "info@ochielmwendwa.co.ke",
+          "foundingDate": "2026-03",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Uniafric House, Koinange Street, Suite 334",
+            "addressLocality": "Nairobi",
+            "addressCountry": "KE"
+          },
+          "areaServed": { "@type": "Country", "name": "Kenya" },
+          "priceRange": "$$",
+          "openingHours": "Mo-Fr 08:00-18:00",
+          "slogan": "Timely. Responsive. Commercially Minded. Always Professional.",
+          "knowsAbout": [
+            "Tax law",
+            "Commercial law",
+            "Family law",
+            "Succession law",
+            "Corporate governance",
+            "Debt recovery",
+            "Private wealth",
+            "Environmental and land law"
+          ],
+          "founder": [
+            { "@type": "Person", "name": "Rachael Mwendwa", "jobTitle": "Managing Partner" }
+          ],
+          "employee": [
+            { "@type": "Person", "name": "Rachael Mwendwa", "jobTitle": "Managing Partner" }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/o-mwendwa-advocates",
+            "https://www.google.com/maps/place/Uniafric+House+Nairobi"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ochielmwendwa.co.ke/#website",
+          "url": "https://ochielmwendwa.co.ke",
+          "name": "O. Mwendwa & Company Advocates",
+          "inLanguage": "en-KE",
+          "publisher": { "@id": "https://ochielmwendwa.co.ke/#organization" }
+        }
       ]
     }
     </script>
