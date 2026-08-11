@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const items = [
   { icon: Scale, label: "LSK Admitted", sub: "Advocates of the High Court" },
-  { icon: Clock, label: "3 Years Active", sub: "Founded 2023, Nairobi" },
+  { icon: Clock, label: "Founded March 2026", sub: "Nairobi, Kenya" },
   { icon: ShieldCheck, label: "Strict Confidentiality", sub: "Attorney–client privilege" },
   { icon: Handshake, label: "Retainer Friendly", sub: "Flexible engagement models" },
   { icon: BookOpenCheck, label: "Pro Bono Active", sub: "30+ hours monthly" },

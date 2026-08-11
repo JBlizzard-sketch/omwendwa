@@ -29,7 +29,7 @@ const Results = () => (
             Results & <span className="text-gold-gradient">Testimonials</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Three years of practice. {firmStats.casesHandled}+ matters resolved. Our reputation is built on outcomes, not promises.
+            Since March 2026. {firmStats.casesHandled}+ matters resolved. Our reputation is built on outcomes, not promises.
           </p>
         </ScrollReveal>
       </div>

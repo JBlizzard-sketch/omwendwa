@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const events = [
-  { year: "2023", title: "The firm is founded", desc: "Rachael Mwendwa and her partner co-found the firm in Nairobi with a thesis: Kenyan law should reflect today's economy, not yesterday's textbooks." },
-  { year: "2024", title: "First major KRA win", desc: "Tax Appeals Tribunal reduces a KES 45M assessment for a manufacturing client by 78%, setting our tax practice on the map." },
-  { year: "2024", title: "Pro bono programme launched", desc: "Formal partnership with the LSK Pro Bono Programme and civil society groups on community land rights." },
-  { year: "2025", title: "Digital practice expansion", desc: "Launch of advisory streams for fintech, digital marketplaces and Data Protection Act compliance." },
-  { year: "2026", title: "Today", desc: "150+ matters resolved across six practice areas, with a 94% favourable outcome rate and a 92% client retention rate." },
+  { year: "Mar 2026", title: "The firm is founded", desc: "Rachael Mwendwa and her partner co-found O. Mwendwa & Company Advocates in Nairobi with a thesis: Kenyan law should reflect today's economy, not yesterday's textbooks." },
+  { year: "Apr 2026", title: "Practice areas established", desc: "Eight practice streams go live — tax, commercial, family, succession, governance, debt recovery, private wealth, and environment & land." },
+  { year: "May 2026", title: "First major KRA win", desc: "Tax Appeals Tribunal reduces a KES 45M assessment for a manufacturing client by 78%, setting our tax practice on the map." },
+  { year: "Jun 2026", title: "Pro bono programme launched", desc: "Formal partnership with the LSK Pro Bono Programme and civil society groups on community land rights." },
+  { year: "Today", title: "Building momentum", desc: "Advisory streams for fintech, digital marketplaces and Data Protection Act compliance, with a growing record of favourable outcomes." },
 ];
 
 const FirmTimeline = () => (
@@ -18,10 +18,10 @@ const FirmTimeline = () => (
             <div className="h-px w-8 bg-primary/60" /> Our journey <div className="h-px w-8 bg-primary/60" />
           </div>
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Three Years, <span className="text-gold-gradient">One Direction</span>
+            From Day One, <span className="text-gold-gradient">One Direction</span>
           </h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            Young enough to question old assumptions. Disciplined enough to win on them.
+            A new firm, built deliberately. Young enough to question old assumptions, disciplined enough to win on them.
           </p>
         </div>
       </ScrollReveal>
