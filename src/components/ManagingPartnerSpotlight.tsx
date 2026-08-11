@@ -58,7 +58,7 @@ const ManagingPartnerSpotlight = () => (
               {credentials.map((c) => {
                 const Icon = c.icon;
                 return (
-                  <div key={c.label} className="rounded-lg border border-border bg-card/60 p-4">
+                  <div key={c.label} className="hover-lift surface-elevated rounded-xl border border-border p-4">
                     <Icon className="mb-2 h-5 w-5 text-primary" />
                     <div className="text-sm font-semibold text-foreground">{c.label}</div>
                     <div className="mt-1 text-xs text-muted-foreground">{c.sub}</div>
