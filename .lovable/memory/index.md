@@ -8,6 +8,7 @@ Lead: **Rachael Mwendwa** (Managing Partner). Second partner stays anonymous —
 Address: Uniafric House, Koinange Street, Suite 334, Nairobi.
 Emails: info@ochielmwendwa.co.ke (general) + ochielmwendwa@gmail.com (direct) — surface both in UI.
 Phone: +254 796 759 632.
+Founded **March 2026** — never claim years of practice or pre-2026 history.
 Promise: "Timely. Responsive. Commercially Minded. Always Professional."
 Multi-agent project — read ROADMAP.md before every session, update it after.
 Retainer model communicated subtly via "How We Work" section — never explicit.
