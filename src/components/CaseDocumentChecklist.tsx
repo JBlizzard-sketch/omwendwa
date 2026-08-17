@@ -25,7 +25,7 @@ const buildChecklistText = (area: PracticeArea) => {
     "Contact:",
     "  Phone:    +254 796 759 632",
     "  Email:    Ochielmwendwa@gmail.com",
-    "  Website:  ochielmwendwa.co.ke",
+    "  Website:  omwendwa.lovable.app",
     "",
     "All communications are protected by attorney-client privilege.",
   ];
