@@ -211,7 +211,6 @@ const About = () => (
               { name: "Law Society of Kenya (LSK)", badge: "LSK" },
               { name: "ICC Young Arbitrators Forum (YAF)", badge: "ICC" },
               { name: "LCIA Young International Arbitration Group", badge: "LCIA" },
-              { name: "Chartered Institute of Arbitrators (CIArb)", badge: "CIArb" },
               { name: "Young ICCA", badge: "YICCA" },
               { name: "East African Law Society", badge: "EALS" },
             ].map((aff) => (

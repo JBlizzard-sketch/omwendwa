@@ -14,6 +14,10 @@ const tabs = [
       {
         title: "Ogiek community — Mau Forest",
         body: "Rachel worked with the Ogiek indigenous community of the Mau Forest through the International Lawyers Project, supporting their fight to defend ancestral land and forest rights.",
+        links: [
+          { label: "The law is both a shield and a sword", href: "https://www.internationallawyersproject.org/post/the-law-is-both-a-shield-and-a-sword" },
+          { label: "I am Ogiek — the Mau Forest is our home", href: "https://www.internationallawyersproject.org/post/i-am-ogiek-we-are-indigenous-people-the-mau-forest-is-our-home-and-we-will-fight-for-it" },
+        ],
       },
       {
         title: "Succession dispute — widow & minors",
@@ -117,6 +121,21 @@ const ProBono = () => {
                   <div key={s.title} className="rounded-lg border border-border bg-secondary/30 p-5">
                     <h4 className="font-heading text-base font-bold text-foreground">{s.title}</h4>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+                    {"links" in s && (s as { links?: { label: string; href: string }[] }).links?.length ? (
+                      <div className="mt-3 flex flex-col gap-1.5">
+                        {(s as { links?: { label: string; href: string }[] }).links!.map((l) => (
+                          <a
+                            key={l.href}
+                            href={l.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-medium text-primary hover:underline"
+                          >
+                            {l.label} →
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 ))}
               </div>
