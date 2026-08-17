@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import QuickLegalCheck from "@/components/QuickLegalCheck";
-import DocumentTemplates from "@/components/DocumentTemplates";
 import LegalGlossary from "@/components/LegalGlossary";
 import KenyanLawFAQ from "@/components/KenyanLawFAQ";
 import StampDutyCalculator from "@/components/StampDutyCalculator";
@@ -149,8 +148,6 @@ const LegalTools = () => {
       {/* Quick Legal Check Decision Trees */}
       <QuickLegalCheck />
 
-      {/* Document Templates */}
-      <DocumentTemplates />
 
       {/* Quick Calculators */}
       <section className="bg-background py-16 lg:py-20">

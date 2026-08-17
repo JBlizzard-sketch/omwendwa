@@ -158,14 +158,7 @@ const Contact = () => {
                     <a href="mailto:Ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
                       <Mail className="h-5 w-5 text-primary mt-0.5" />
                       <span>
-                        <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">General enquiries</span>
-                        Ochielmwendwa@gmail.com
-                      </span>
-                    </a>
-                    <a href="mailto:Ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
-                      <Mail className="h-5 w-5 text-primary mt-0.5" />
-                      <span>
-                        <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">Direct line</span>
+                        <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">Email</span>
                         Ochielmwendwa@gmail.com
                       </span>
                     </a>

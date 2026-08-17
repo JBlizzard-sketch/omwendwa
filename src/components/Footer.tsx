@@ -89,14 +89,7 @@ const Footer = () => (
             <a href="mailto:Ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               <span>
-                <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">General enquiries</span>
-                Ochielmwendwa@gmail.com
-              </span>
-            </a>
-            <a href="mailto:Ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <span>
-                <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">Direct line</span>
+                <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">Email</span>
                 Ochielmwendwa@gmail.com
               </span>
             </a>
