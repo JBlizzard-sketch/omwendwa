@@ -15,4 +15,13 @@ export const practiceImages: Record<string, string> = {
   // New areas reuse existing visual language until bespoke imagery is sourced
   "practice-debt-recovery": practiceCommercialImg,
   "practice-private-wealth": practiceSuccessionImg,
+  "practice-employment": practiceCommercialImg,
+  "practice-conveyancing": practiceLandImg,
+  "practice-adr": practiceGovernanceImg,
+  "practice-human-rights": practiceLandImg,
+  "practice-legislative": practiceGovernanceImg,
+  "practice-policy": practiceGovernanceImg,
+  "practice-research": practiceTaxImg,
+  "practice-training": practiceCommercialImg,
+  "practice-legal-tech": practiceTaxImg,
 };

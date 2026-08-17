@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import QuickLegalCheck from "@/components/QuickLegalCheck";
-import DocumentTemplates from "@/components/DocumentTemplates";
 import LegalGlossary from "@/components/LegalGlossary";
 import KenyanLawFAQ from "@/components/KenyanLawFAQ";
 import StampDutyCalculator from "@/components/StampDutyCalculator";
@@ -56,8 +55,8 @@ const LegalTools = () => {
   return (
     <>
       <SEOHead
-        title="Legal Tools — Case Quiz, Decision Trees, Templates & FAQ"
-        description="Free legal tools: case eligibility quiz, interactive legal checks, printable document templates, law glossary, and FAQ about Kenyan law."
+        title="Legal Tools — Case Quiz, Decision Trees, Calculators & FAQ"
+        description="Free legal tools: case eligibility quiz, interactive legal checks, stamp duty and notice period calculators, a law glossary, and FAQs on Kenyan law."
       />
 
       <section className="bg-background pt-28 pb-16 lg:pt-36 lg:pb-20">
@@ -149,8 +148,6 @@ const LegalTools = () => {
       {/* Quick Legal Check Decision Trees */}
       <QuickLegalCheck />
 
-      {/* Document Templates */}
-      <DocumentTemplates />
 
       {/* Quick Calculators */}
       <section className="bg-background py-16 lg:py-20">

@@ -15,8 +15,8 @@ import { practiceImages as imageMap } from "@/data/practiceImages";
 const PracticeAreas = () => (
   <>
     <SEOHead
-      title="Practice Areas — Tax, Commercial, Family, Land, Debt Recovery, Private Wealth"
-      description="Eight practice areas: Tax, Commercial, Family, Succession, Governance, Environmental & Land Law, Debt Recovery, and Private Wealth — built for Kenya."
+      title="Practice Areas — Litigation, Tax, Commercial, Employment, Conveyancing & More"
+      description="Litigation, tax, commercial, employment, conveyancing, family, succession, governance, land, ADR, human rights, policy and legislative drafting, legal tech — built for Kenya."
     />
 
     <section className="bg-background pt-28 pb-16 lg:pt-36 lg:pb-20">
@@ -30,7 +30,7 @@ const PracticeAreas = () => (
             Practice <span className="text-gold-gradient">Areas</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Comprehensive legal services across eight core practice areas, each supported by deep expertise in Kenyan statute and case law.
+            Comprehensive legal services across our core practice areas, each supported by deep expertise in Kenyan statute and case law.
           </p>
         </ScrollReveal>
       </div>

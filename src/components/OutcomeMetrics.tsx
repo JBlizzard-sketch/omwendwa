@@ -4,9 +4,9 @@ import { Banknote, Gavel, FileCheck2, CalendarRange } from "lucide-react";
 
 const metrics = [
   { icon: Banknote, value: 380, suffix: "M+", label: "KES recovered or saved", sub: "Tax, commercial & land matters" },
-  { icon: FileCheck2, value: 150, suffix: "+", label: "Matters resolved", sub: "Across six practice areas" },
+  { icon: FileCheck2, value: 150, suffix: "+", label: "Matters resolved", sub: "Across our practice areas" },
   { icon: Gavel, value: 42, suffix: "", label: "KRA disputes won", sub: "Tribunal & objection stage" },
-  { icon: CalendarRange, value: 8, suffix: "", label: "Practice areas", sub: "Founded March 2026 in Nairobi" },
+  { icon: CalendarRange, value: 17, suffix: "", label: "Practice areas", sub: "Founded March 2026 in Nairobi" },
 ];
 
 const OutcomeMetrics = () => (

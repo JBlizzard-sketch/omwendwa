@@ -82,7 +82,7 @@ const BlogPost = () => {
         title={post.title}
         description={post.metaDescription}
         type="article"
-        canonical={`https://ochielmwendwa.co.ke/insights/${post.slug}`}
+        canonical={`https://omwendwa.lovable.app/insights/${post.slug}`}
       />
       <ReadingProgress />
 

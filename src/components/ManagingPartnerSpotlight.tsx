@@ -7,7 +7,7 @@ import rachelImg from "@/assets/rachel-mwendwa.jpg";
 
 const credentials = [
   { icon: Scale, label: "Advocate of the High Court", sub: "Commissioner for Oaths · Notary Public" },
-  { icon: Globe, label: "International practice", sub: "UNEP · ILRI · AFRODAD · ILPI Oslo" },
+  { icon: Globe, label: "International practice", sub: "International Lawyers Project · AFRODAD" },
   { icon: Award, label: "Moot court distinction", sub: "Africa HRMC Grand Finalist · Jessup" },
 ];
 
@@ -24,7 +24,7 @@ const ManagingPartnerSpotlight = () => (
             >
               <img
                 src={rachelImg}
-                alt="Rachael Mwendwa — Managing Partner, O. Mwendwa & Company Advocates"
+                alt="Rachel Mwendwa — Managing Partner, O. Mwendwa & Company Advocates"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 width={800}
@@ -32,7 +32,7 @@ const ManagingPartnerSpotlight = () => (
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/70 to-transparent p-5">
                 <div className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Managing Partner</div>
-                <div className="font-heading text-xl font-bold text-foreground">Rachael Mwendwa</div>
+                <div className="font-heading text-xl font-bold text-foreground">Rachel Mwendwa</div>
               </div>
             </motion.div>
           </div>
@@ -45,13 +45,13 @@ const ManagingPartnerSpotlight = () => (
               <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">Led By</span>
             </div>
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Rachael Mwendwa, <span className="text-gold-gradient">Managing Partner</span>
+              Rachel Mwendwa, <span className="text-gold-gradient">Managing Partner</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Rachael leads every client relationship at the firm — from first consultation to final outcome. Her practice spans environmental and land law, complex succession, and high-stakes advisory, shaped by international work with UNEP, ILRI and AFRODAD, and by a conviction that Kenyan law must answer to today's economy.
+              Rachel leads every client relationship at the firm — from first consultation to final outcome. Her practice spans environmental and land law, complex succession, and high-stakes advisory, shaped by international work with the International Lawyers Project and AFRODAD, and by a conviction that Kenyan law must answer to today's economy.
             </p>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              She is supported by a partner whose practice covers commercial law, tax and corporate governance, and by a network of counsel across Kenya's courts and tribunals.
+              She is supported by a partner whose practice covers litigation, commercial law, tax and corporate governance, and by a network of counsel across Kenya's courts and tribunals.
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
@@ -75,7 +75,7 @@ const ManagingPartnerSpotlight = () => (
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-secondary">
-                  Speak with Rachael
+                  Speak with Rachel
                 </Button>
               </Link>
             </div>

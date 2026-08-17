@@ -391,7 +391,7 @@ We advise all property owners to:
 
 ## Our Land Law Practice
 
-Rachael Mwendwa, our Managing Partner, has particular expertise in environmental and land law, including experience with international land governance frameworks. Whether you're facing a boundary dispute, investigating potential title fraud, or navigating a complex succession involving land, our team provides strategic, results-oriented legal representation.`
+Rachel Mwendwa, our Managing Partner, has particular expertise in environmental and land law, including experience with international land governance frameworks. Whether you're facing a boundary dispute, investigating potential title fraud, or navigating a complex succession involving land, our team provides strategic, results-oriented legal representation.`
   }
 ];
 

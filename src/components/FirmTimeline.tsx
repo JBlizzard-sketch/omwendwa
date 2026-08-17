@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const events = [
-  { year: "Mar 2026", title: "The firm is founded", desc: "Rachael Mwendwa and her partner co-found O. Mwendwa & Company Advocates in Nairobi with a thesis: Kenyan law should reflect today's economy, not yesterday's textbooks." },
-  { year: "Apr 2026", title: "Practice areas established", desc: "Eight practice streams go live — tax, commercial, family, succession, governance, debt recovery, private wealth, and environment & land." },
+  { year: "Mar 2026", title: "The firm is founded", desc: "Rachel Mwendwa and her partner co-found O. Mwendwa & Company Advocates in Nairobi with a thesis: Kenyan law should reflect today's economy, not yesterday's textbooks." },
+  { year: "Apr 2026", title: "Practice areas established", desc: "Practice streams go live — litigation-led dispute work, tax, commercial, employment, conveyancing, family, succession, governance, debt recovery, private wealth, and environment & land." },
   { year: "May 2026", title: "First major KRA win", desc: "Tax Appeals Tribunal reduces a KES 45M assessment for a manufacturing client by 78%, setting our tax practice on the map." },
   { year: "Jun 2026", title: "Pro bono programme launched", desc: "Formal partnership with the LSK Pro Bono Programme and civil society groups on community land rights." },
   { year: "Today", title: "Building momentum", desc: "Advisory streams for fintech, digital marketplaces and Data Protection Act compliance, with a growing record of favourable outcomes." },

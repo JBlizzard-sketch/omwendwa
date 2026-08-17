@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://ochielmwendwa.co.ke/sitemap.xml
+Sitemap: https://omwendwa.lovable.app/sitemap.xml

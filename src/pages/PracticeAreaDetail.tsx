@@ -35,7 +35,7 @@ const PracticeAreaDetail = () => {
       <SEOHead
         title={`${area.title} in Kenya`}
         description={area.description.slice(0, 155)}
-        canonical={`https://ochielmwendwa.co.ke/practice-areas/${area.id}`}
+        canonical={`https://omwendwa.lovable.app/practice-areas/${area.id}`}
       />
       {area.faqs.length > 0 && (
         <Helmet>

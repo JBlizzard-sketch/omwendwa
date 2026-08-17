@@ -86,18 +86,11 @@ const Footer = () => (
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               +254 796 759 632
             </a>
-            <a href="mailto:info@ochielmwendwa.co.ke" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
+            <a href="mailto:Ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               <span>
-                <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">General enquiries</span>
-                info@ochielmwendwa.co.ke
-              </span>
-            </a>
-            <a href="mailto:ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <span>
-                <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">Direct line</span>
-                ochielmwendwa@gmail.com
+                <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">Email</span>
+                Ochielmwendwa@gmail.com
               </span>
             </a>
             <div className="flex items-start gap-3 text-sm text-muted-foreground">
