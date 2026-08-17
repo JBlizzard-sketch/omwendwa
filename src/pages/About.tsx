@@ -14,7 +14,7 @@ const About = () => (
   <>
     <SEOHead
       title="About the Firm — Our Advocates & Story"
-      description="Learn about O. Mwendwa & Company Advocates, a Nairobi law firm founded on integrity, clarity, and results. Meet Managing Partner Rachael Mwendwa and our partnership."
+      description="Learn about O. Mwendwa & Company Advocates, a Nairobi law firm founded on integrity, clarity, and results. Meet Managing Partner Rachel Mwendwa and our partnership."
     />
 
     {/* Hero */}
@@ -103,14 +103,14 @@ const About = () => (
           </h2>
         </ScrollReveal>
 
-        {/* Rachael Mwendwa */}
+        {/* Rachel Mwendwa */}
         <ScrollReveal>
           <div className="mb-16 grid items-center gap-10 lg:grid-cols-5">
             <div className="lg:col-span-2">
               <div className="aspect-[4/5] overflow-hidden rounded-lg border border-border">
                 <img
                   src={rachelImg}
-                  alt="Rachael Mwendwa — Managing Partner, O. Mwendwa & Company Advocates"
+                  alt="Rachel Mwendwa — Managing Partner, O. Mwendwa & Company Advocates"
                   className="h-full w-full object-cover"
                   loading="lazy"
                   width={800}
@@ -120,9 +120,9 @@ const About = () => (
             </div>
             <div className="lg:col-span-3">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Managing Partner</span>
-              <h3 className="mt-2 font-heading text-2xl font-bold text-foreground md:text-3xl">Rachael Mwendwa</h3>
+              <h3 className="mt-2 font-heading text-2xl font-bold text-foreground md:text-3xl">Rachel Mwendwa</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Rachael Mwendwa holds a Bachelor of Laws (LLB) from the University of Nairobi and a Post-Graduate Diploma from the Kenya School of Law. She is an Advocate of the High Court of Kenya, a Commissioner for Oaths, a Notary Public, and a member of the Law Society of Kenya.
+                Rachel Mwendwa holds a Bachelor of Laws (LLB) from the University of Nairobi and a Post-Graduate Diploma from the Kenya School of Law. She is an Advocate of the High Court of Kenya, a Commissioner for Oaths, a Notary Public, and a member of the Law Society of Kenya.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Before co-founding the firm, Rac gained significant international experience. She served as a Legal Intern at the Institute for Law and Environmental Governance (ILEG) and the International Livestock Research Institute (ILRI). She also worked with the African Forum and Network on Debt and Development (AFRODAD) on debt governance across Africa, and contributed to the International Law and Policy Institute (ILP) in Oslo, Norway, on fisheries governance. She has consulted for the United Nations Environment Programme (UNEP) on environmental law matters.

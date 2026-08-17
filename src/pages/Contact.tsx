@@ -155,18 +155,18 @@ const Contact = () => {
                     <a href="tel:+254796759632" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground">
                       <Phone className="h-5 w-5 text-primary" /> +254 796 759 632
                     </a>
-                    <a href="mailto:info@ochielmwendwa.co.ke" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
+                    <a href="mailto:Ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
                       <Mail className="h-5 w-5 text-primary mt-0.5" />
                       <span>
                         <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">General enquiries</span>
-                        info@ochielmwendwa.co.ke
+                        Ochielmwendwa@gmail.com
                       </span>
                     </a>
-                    <a href="mailto:ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
+                    <a href="mailto:Ochielmwendwa@gmail.com" className="flex items-start gap-3 text-sm text-muted-foreground hover:text-foreground">
                       <Mail className="h-5 w-5 text-primary mt-0.5" />
                       <span>
                         <span className="block text-[10px] uppercase tracking-wider text-muted-foreground/70">Direct line</span>
-                        ochielmwendwa@gmail.com
+                        Ochielmwendwa@gmail.com
                       </span>
                     </a>
                     <div className="flex items-start gap-3 text-sm text-muted-foreground">

@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Margaret W.",
     role: "Property Developer, Mombasa",
-    content: "When a boundary dispute threatened to derail a major development project, Rachael Mwendwa and her team acted swiftly. They secured an injunction within 48 hours and ultimately resolved the matter through mediation, saving us months of litigation. Their knowledge of land law is exceptional.",
+    content: "When a boundary dispute threatened to derail a major development project, Rachel Mwendwa and her team acted swiftly. They secured an injunction within 48 hours and ultimately resolved the matter through mediation, saving us months of litigation. Their knowledge of land law is exceptional.",
     rating: 5
   },
   {

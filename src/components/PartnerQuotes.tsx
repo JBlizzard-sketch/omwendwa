@@ -11,7 +11,7 @@ const quotes: {
   quote: string;
 }[] = [
   {
-    name: "Rachael Mwendwa",
+    name: "Rachel Mwendwa",
     role: "Managing Partner",
     image: rachelImg,
     headline: "Why I Practice Law",

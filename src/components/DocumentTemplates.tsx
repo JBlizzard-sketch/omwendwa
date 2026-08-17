@@ -461,7 +461,7 @@ const TemplateModal = ({ template, onClose }: { template: Template; onClose: () 
           <body>
             <pre>${template.content}</pre>
             <div class="disclaimer">
-              <strong>DISCLAIMER:</strong> This template is provided by O. Mwendwa & Company Advocates for general reference only. It should not be used without professional legal review. Every situation is unique — engage an advocate before executing any legal document. Contact us at info@ochielmwendwa.co.ke or +254 796 759 632.
+              <strong>DISCLAIMER:</strong> This template is provided by O. Mwendwa & Company Advocates for general reference only. It should not be used without professional legal review. Every situation is unique — engage an advocate before executing any legal document. Contact us at Ochielmwendwa@gmail.com or +254 796 759 632.
             </div>
           </body>
         </html>
