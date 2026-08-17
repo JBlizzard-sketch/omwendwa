@@ -7,7 +7,7 @@ import rachelImg from "@/assets/rachel-mwendwa.jpg";
 
 const credentials = [
   { icon: Scale, label: "Advocate of the High Court", sub: "Commissioner for Oaths · Notary Public" },
-  { icon: Globe, label: "International practice", sub: "UNEP · ILRI · AFRODAD · ILPI Oslo" },
+  { icon: Globe, label: "International practice", sub: "International Lawyers Project · AFRODAD" },
   { icon: Award, label: "Moot court distinction", sub: "Africa HRMC Grand Finalist · Jessup" },
 ];
 
@@ -48,10 +48,10 @@ const ManagingPartnerSpotlight = () => (
               Rachel Mwendwa, <span className="text-gold-gradient">Managing Partner</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Rachel leads every client relationship at the firm — from first consultation to final outcome. Her practice spans environmental and land law, complex succession, and high-stakes advisory, shaped by international work with UNEP, ILRI and AFRODAD, and by a conviction that Kenyan law must answer to today's economy.
+              Rachel leads every client relationship at the firm — from first consultation to final outcome. Her practice spans environmental and land law, complex succession, and high-stakes advisory, shaped by international work with the International Lawyers Project and AFRODAD, and by a conviction that Kenyan law must answer to today's economy.
             </p>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              She is supported by a partner whose practice covers commercial law, tax and corporate governance, and by a network of counsel across Kenya's courts and tribunals.
+              She is supported by a partner whose practice covers litigation, commercial law, tax and corporate governance, and by a network of counsel across Kenya's courts and tribunals.
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-3">

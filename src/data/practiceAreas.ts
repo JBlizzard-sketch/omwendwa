@@ -192,7 +192,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Environmental & Land Law",
     shortTitle: "Land Law",
     icon: TreePine,
-    description: "Land is Kenya's most valuable and most contested asset. Our Managing Partner, Rachel Mwendwa, brings specialised expertise in environmental and land law, including international experience in land governance. We handle land transactions, disputes, environmental compliance, and natural resource matters with strategic precision.",
+    description: "Land is Kenya's most valuable and most contested asset. Our Managing Partner, Rachel Mwendwa, brings specialised expertise in environmental and land law, including international experience in land governance and indigenous land rights. We handle land transactions, disputes, environmental compliance, and natural resource matters with strategic precision.",
     services: [
       "Land acquisition and due diligence",
       "Title verification and registration",

@@ -55,8 +55,8 @@ const LegalTools = () => {
   return (
     <>
       <SEOHead
-        title="Legal Tools — Case Quiz, Decision Trees, Templates & FAQ"
-        description="Free legal tools: case eligibility quiz, interactive legal checks, printable document templates, law glossary, and FAQ about Kenyan law."
+        title="Legal Tools — Case Quiz, Decision Trees, Calculators & FAQ"
+        description="Free legal tools: case eligibility quiz, interactive legal checks, stamp duty and notice period calculators, a law glossary, and FAQs on Kenyan law."
       />
 
       <section className="bg-background pt-28 pb-16 lg:pt-36 lg:pb-20">

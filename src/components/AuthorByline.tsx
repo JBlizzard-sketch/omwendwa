@@ -15,7 +15,7 @@ const authors: Record<string, Author> = {
     name: "Rachel Mwendwa",
     role: "Managing Partner",
     img: rachelImg,
-    credential: "LSK · ICC YAF · UNEP consultant · environmental & land law",
+    credential: "LSK · ICC YAF · International Lawyers Project · environmental & land law",
   },
 };
 

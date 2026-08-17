@@ -125,13 +125,13 @@ const About = () => (
                 Rachel Mwendwa holds a Bachelor of Laws (LLB) from the University of Nairobi and a Post-Graduate Diploma from the Kenya School of Law. She is an Advocate of the High Court of Kenya, a Commissioner for Oaths, a Notary Public, and a member of the Law Society of Kenya.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Before co-founding the firm, Rac gained significant international experience. She served as a Legal Intern at the Institute for Law and Environmental Governance (ILEG) and the International Livestock Research Institute (ILRI). She also worked with the African Forum and Network on Debt and Development (AFRODAD) on debt governance across Africa, and contributed to the International Law and Policy Institute (ILP) in Oslo, Norway, on fisheries governance. She has consulted for the United Nations Environment Programme (UNEP) on environmental law matters.
+                Before co-founding the firm, Rachel gained significant international experience. She worked with the International Lawyers Project, including alongside the Ogiek indigenous community of the Mau Forest on ancestral land and forest rights, and with the African Forum and Network on Debt and Development (AFRODAD) on debt governance across Africa. She also served as a Legal Intern at the Institute for Law and Environmental Governance (ILEG).
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 A distinguished moot court competitor, Rac was a Grand Finalist at the Africa Human Rights Moot Court Competition, a National Finalist at the Phillip C. Jessup International Moot Court Competition (Kenya Rounds), and has competed in the East African Moot Court Competition. She has authored publications on environmental law, international governance, and fisheries policy, and has been invited to speak at international conferences in Nairobi, Oslo, and Cape Town.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
-                {["LSK Member", "Commissioner for Oaths", "Notary Public", "ICC YAF", "LCIA YIAG", "YICCA", "Environmental Law", "Land Law", "UNEP Consultant"].map((tag) => (
+                {["LSK Member", "Commissioner for Oaths", "Notary Public", "ICC YAF", "LCIA YIAG", "YICCA", "Environmental Law", "Land Law", "Human Rights"].map((tag) => (
                   <span key={tag} className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-muted-foreground">
                     {tag}
                   </span>
@@ -158,19 +158,19 @@ const About = () => (
               <div className="lg:col-span-3">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Partner</span>
                 <h3 className="mt-2 font-heading text-2xl font-bold text-foreground md:text-3xl">
-                  Commercial, Tax &amp; Corporate Governance
+                  Litigation, Commercial, Tax &amp; Corporate Governance
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  The firm's second partner is an Advocate of the High Court of Kenya, a Commissioner for Oaths, and a member of the Law Society of Kenya, with a practice centred on commercial law, corporate governance, and tax advisory.
+                  The firm's second partner is an Advocate of the High Court of Kenya and a member of the Law Society of Kenya, with a practice centred on litigation, commercial law, corporate governance, and tax advisory.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  A MAC-accredited mediator and member of the Chartered Institute of Arbitrators (Kenya Branch), our Partner has advised clients from technology startups to established manufacturers, and has argued matters before the Tax Appeals Tribunal and the Commercial Division of the High Court.
+                  Litigation is her strongest suit. She is a formidable courtroom advocate who has argued matters before the Tax Appeals Tribunal, the Employment and Labour Relations Court, and the Commercial Division of the High Court — and she advises clients from technology startups to established manufacturers on the strategy behind every filing.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   By preference, our Partner keeps a private public profile and works behind the scenes on client mandates. Instructions, correspondence, and client relationships are led by the Managing Partner.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {["LSK Member", "Commissioner for Oaths", "CIArb Member", "MAC Certified Mediator", "Commercial Law", "Tax Advisory", "Corporate Governance"].map((tag) => (
+                  {["LSK Member", "Litigation", "Commercial Law", "Tax Advisory", "Corporate Governance", "Dispute Strategy"].map((tag) => (
                     <span key={tag} className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-muted-foreground">
                       {tag}
                     </span>
