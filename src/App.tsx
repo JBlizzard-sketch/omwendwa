@@ -13,6 +13,9 @@ import ScrollProgressBar from "@/components/ScrollProgressBar";
 import PageTransition from "@/components/PageTransition";
 import TrustBar from "@/components/TrustBar";
 import ExitIntentModal from "@/components/ExitIntentModal";
+import LegacyRedirect from "@/components/LegacyRedirect";
+import SiteSearch from "@/components/SiteSearch";
+import { SiteSearchProvider, useSiteSearch } from "@/hooks/use-site-search";
 
 import Index from "./pages/Index";
 import About from "./pages/About";
