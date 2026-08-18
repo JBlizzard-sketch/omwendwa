@@ -13,6 +13,9 @@ import ScrollProgressBar from "@/components/ScrollProgressBar";
 import PageTransition from "@/components/PageTransition";
 import TrustBar from "@/components/TrustBar";
 import ExitIntentModal from "@/components/ExitIntentModal";
+import LegacyRedirect from "@/components/LegacyRedirect";
+import SiteSearch from "@/components/SiteSearch";
+import { SiteSearchProvider, useSiteSearch } from "@/hooks/use-site-search";
 
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -56,6 +59,11 @@ const AnimatedRoutes = () => {
   );
 };
 
+const SearchLayer = () => {
+  const { open, setOpen } = useSiteSearch();
+  return <SiteSearch open={open} onOpenChange={setOpen} />;
+};
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -63,18 +71,22 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <ScrollProgressBar />
-          <Header />
-          <ScrollToTop />
-          <main className="min-h-screen pb-14 lg:pb-0">
-            <AnimatedRoutes />
-          </main>
-          <TrustBar />
-          <Footer />
-          <WhatsAppButton />
-          <MobileCTABar />
-          <ExitIntentModal />
-
+          <SiteSearchProvider>
+            <ScrollProgressBar />
+            <Header />
+            <ScrollToTop />
+            <main className="min-h-screen pb-14 lg:pb-0">
+              <LegacyRedirect>
+                <AnimatedRoutes />
+              </LegacyRedirect>
+            </main>
+            <TrustBar />
+            <Footer />
+            <WhatsAppButton />
+            <MobileCTABar />
+            <ExitIntentModal />
+            <SearchLayer />
+          </SiteSearchProvider>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
@@ -82,3 +94,4 @@ const App = () => (
 );
 
 export default App;
+
