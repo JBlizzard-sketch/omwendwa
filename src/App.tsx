@@ -56,6 +56,11 @@ const AnimatedRoutes = () => {
   );
 };
 
+const SearchLayer = () => {
+  const { open, setOpen } = useSiteSearch();
+  return <SiteSearch open={open} onOpenChange={setOpen} />;
+};
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -63,18 +68,22 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <ScrollProgressBar />
-          <Header />
-          <ScrollToTop />
-          <main className="min-h-screen pb-14 lg:pb-0">
-            <AnimatedRoutes />
-          </main>
-          <TrustBar />
-          <Footer />
-          <WhatsAppButton />
-          <MobileCTABar />
-          <ExitIntentModal />
-
+          <SiteSearchProvider>
+            <ScrollProgressBar />
+            <Header />
+            <ScrollToTop />
+            <main className="min-h-screen pb-14 pt-16 lg:pb-0 lg:pt-20">
+              <LegacyRedirect>
+                <AnimatedRoutes />
+              </LegacyRedirect>
+            </main>
+            <TrustBar />
+            <Footer />
+            <WhatsAppButton />
+            <MobileCTABar />
+            <ExitIntentModal />
+            <SearchLayer />
+          </SiteSearchProvider>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
@@ -82,3 +91,4 @@ const App = () => (
 );
 
 export default App;
+
