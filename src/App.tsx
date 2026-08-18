@@ -75,7 +75,7 @@ const App = () => (
             <ScrollProgressBar />
             <Header />
             <ScrollToTop />
-            <main className="min-h-screen pb-14 pt-16 lg:pb-0 lg:pt-20">
+            <main className="min-h-screen pb-14 lg:pb-0">
               <LegacyRedirect>
                 <AnimatedRoutes />
               </LegacyRedirect>
