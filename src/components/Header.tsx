@@ -71,7 +71,7 @@ const Header = () => {
               <Link
                 to={link.href}
                 className={cn(
-                  "flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition-colors hover:text-primary",
+                  "flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold transition-colors hover:text-primary",
                   location.pathname.startsWith(link.href) ? "text-primary" : "text-plum-light",
                 )}
                 aria-expanded={link.mega ? megaOpen : undefined}
@@ -102,7 +102,7 @@ const Header = () => {
 
           <a
             href="tel:+254796759632"
-            className="hidden items-center gap-2 rounded-full px-2 text-sm font-medium text-plum-light transition-colors hover:text-primary xl:flex"
+            className="hidden items-center gap-2 rounded-full px-2 text-sm font-medium whitespace-nowrap text-plum-light transition-colors hover:text-primary 2xl:flex"
           >
             <Phone className="h-4 w-4" />
             +254 796 759 632
