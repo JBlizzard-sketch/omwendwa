@@ -1,54 +1,57 @@
-# Next Sweep — 5 Credits of High-Impact Polish
+# O. Mwendwa & Company Advocates — "Rose Glow" Relaunch
 
-The site has strong bones now (hero carousel, decision trees, templates, scheduler, checklists, FAQ). The remaining gaps are conversion plumbing, trust/credibility signals, and a few content surfaces that still feel thin. This sweep is 100% frontend and tightens what's already there.
+A full light-mode rebrand plus a serious depth upgrade: magazine-grade layouts, motion, a site-wide command search, and the omwendwa.com domain wired end to end.
 
----
+## 1. New identity: Rose Glow (light, bright, alive)
 
-## 1. Conversion & Trust Layer
-- **Trust strip** under the hero: SCAK admission, years active (3), bar number placeholder, confidentiality badge, retainer-friendly note — small icons, navy/gold.
-- **Exit-intent / scroll-triggered mini-modal** (desktop only, once per session) offering the free "Do I Have a Case?" check with a soft dismiss.
-- **Inline "Talk to a partner in 24 hrs" CTA card** repeated at the bottom of Practice Areas, Results, and Insights with WhatsApp + Call + Schedule buttons.
-- **Testimonial trust bar**: 3 short pull-quotes + star rating + "Verified client" tag, placed above the footer site-wide.
+Rachel's references (Latham, Kirkland, Bowmans) are white, airy and typographically confident. Her muse — Jessica Pearson, with Michelle Obama / Ketanji Brown Jackson warmth — pushes toward blush and brass rather than corporate navy.
 
-## 2. Results Page Depth
-- **Outcome metrics dashboard** at the top: animated counters for "KES recovered", "Cases resolved", "KRA disputes won", "Years active: 3" — tied to existing AnimatedCounter.
-- **Case study detail modal**: clicking any filtered case opens a modal with Situation / Action / Outcome / Lesson — no new routes, just dialog.
-- **Pro bono spotlight expansion**: turn the existing ProBono section into a tabbed view (Access to Justice / Community Education / Legal Aid Clinics) with 2-3 anonymised stories.
+- White canvas (`#FFFFFF`) with a warm blush wash (`#FFF5F6`) on alternating bands.
+- Primary rose `#D4576F`, deep plum ink `#3A1B2A` for headings, soft serene blue `#8FC3D8` as the secondary accent, brass `#C9A227` for hairlines and dividers.
+- Body text in near-black plum on white — high contrast, tested for legibility at small sizes; no light-grey-on-white.
+- Typography: Fraunces (or Playfair) display headings paired with Inter/Plus Jakarta body at generous 17–18px base, wide line height, balanced headline wrapping.
+- Every token replaced in `index.css` + `tailwind.config.ts` (semantic HSL only). Dark-mode-era utilities (glass panels over navy, gold gradients) are re-tuned for light surfaces so nothing goes washed-out or invisible.
 
-## 3. Insights / Blog Finishing
-- **Newsletter signup card** (frontend-only, stores to localStorage + success toast) at the end of every blog post and on the Insights index.
-- **"Read next" recommendation strip** under each blog post (3 related by category).
-- **Estimated read time** badges on every post card (auto-calculated from word count).
-- **Author byline block** at top of each post with partner photo + 1-line credential.
+## 2. Vavavoom: front-end features to add
 
-## 4. Legal Tools — Two New Mini-Tools
-- **Stamp Duty Calculator** (Kenya rates: 4% urban / 2% rural land, 1% shares) — inputs → result + "Get formal valuation" CTA.
-- **Employment Notice Period Estimator** — role + length of service → statutory notice + severance estimate + CTA.
-- Both as small cards in the existing Legal Tools grid.
+- **Cinematic hero**: full-bleed image carousel with Ken Burns drift, staggered word-by-word headline reveal, animated rose underline, dual CTA, scroll cue.
+- **Sticky "aurora" header**: transparent over hero, frosted white on scroll, mega-menu for the 17 practice areas grouped into columns with icons and one-line descriptors.
+- **Practice areas**: filterable bento grid with hover image reveal, category chips (Corporate / Private Client / Public Interest / Advisory), and per-area detail pages with sticky in-page nav.
+- **Rachel spotlight**: split-screen portrait with parallax, animated credential chips, pull-quote, and a "Meet Rachel" marquee of institutions (International Lawyers Project, AFRODAD).
+- **Results / case studies**: horizontal snap carousel with animated outcome counters and a filterable grid.
+- **Client stories**: auto-playing testimonial carousel with fade-through and avatar rail.
+- **Insights**: magazine layout — featured article hero, category tabs, reading-time badges, related posts, reading progress bar.
+- **Ogiek / pro bono feature band**: editorial callout with the International Lawyers Project links, image treatment, and a soft-blue background.
+- **Micro-interactions throughout**: scroll-reveal on every section, magnetic buttons, gradient hairline dividers, count-up stats, hover-lift cards, page transitions, `prefers-reduced-motion` respected everywhere.
+- **Mobile**: full-screen animated nav drawer, swipeable carousels, sticky call/WhatsApp bar, 44px tap targets, no horizontal overflow at 320px.
 
-## 5. About Page Humanisation
-- **Timeline component**: "Our 3-Year Journey" — 2022 founding, 2023 first major KRA win, 2024 pro bono launch, 2025 digital practice expansion, 2026 today.
-- **"In the press / speaking" placeholder strip** (3 logo/event cards, marked as illustrative).
-- **Values grid** (4 cards): Modern Practice, Plain-Language Counsel, Pro Bono Commitment, Tech-Forward.
+## 3. Site-wide search
 
-## 6. Site-wide Polish
-- **404 page redesign** with on-brand illustration + 4 popular destinations.
-- **Footer enrichment**: add quick links to top 3 blog posts, top 3 practice areas, office hours, and a small "Built by Munuve Tech" credit (already there — verify hyperlink).
-- **Skeleton loaders** on routes that fetch nothing yet (preps for backend later, removes layout shift).
-- **Reduced-motion respect**: gate framer-motion animations behind `prefers-reduced-motion`.
+- ⌘K / `/` command palette (cmdk, already installed) plus a visible search button in the header and a search field on mobile.
+- Indexes practice areas, blog posts, FAQ entries, glossary terms, checklists and static pages from a single generated index module.
+- Fuzzy match, grouped results with icons, keyboard navigation, recent searches, empty-state suggestions.
 
----
+## 4. Domain, SEO and redirects (omwendwa.com)
 
-## Technical Notes
-- All frontend, no Cloud/Supabase activation in this sweep.
-- New components: `TrustStrip`, `ExitIntentModal`, `TalkToPartnerCTA`, `OutcomeMetrics`, `CaseStudyModal`, `NewsletterSignup`, `RelatedPosts`, `AuthorByline`, `StampDutyCalculator`, `NoticePeriodCalculator`, `FirmTimeline`, `ValuesGrid`.
-- Reuse existing tokens (navy/gold/cream), AnimatedCounter, ScrollReveal, framer-motion.
-- Newsletter + exit-intent persist to localStorage only.
-- Verify mobile breakpoints on every new component; nothing new in the sticky mobile CTA bar.
+- Swap every `omwendwa.lovable.app` reference to `https://omwendwa.com` — canonical in `index.html`, per-route canonicals via `SEOHead`, `og:url`, JSON-LD `@id`s, sitemap, robots.
+- Regenerate `public/sitemap.xml` from the live route table (all 17 practice areas + all posts), no fabricated `lastmod`.
+- JSON-LD refresh: LegalService/Organization + WebSite sitewide, `WebSite` SearchAction for the new search, `BreadcrumbList` + `Article` per insight, `Service` per practice area — all naming O. Mwendwa & Company Advocates, founded March 2026, Ochielmwendwa@gmail.com.
+- **301s for legacy paths** — `/ochiel*`, `/services/*` → `/practice-areas/*`, `/blog/*` → `/insights/*`, `/team` → `/about`, `/areas/*`, `/practice/*`:
+  - `vercel.json` `redirects` (real 301s on Vercel).
+  - A React `LegacyRedirect` route so the same paths also resolve correctly on Lovable hosting, which ignores `vercel.json`.
+- Note: Lovable's own hosting cannot issue server 301s; the client-side route covers it there, and Vercel gets true 301 status codes.
 
-## Build Order
-1. Trust strip + site-wide testimonial bar + Talk-to-Partner CTA card
-2. Results: outcome metrics + case study modal + pro bono tabs
-3. Blog: newsletter, related posts, read time, author byline
-4. Two new legal calculators
-5. About timeline + values grid + 404 redesign + footer polish + reduced-motion pass
+## 5. Vercel production readiness
+
+- Verify `vercel.json` (framework, build command, SPA rewrite, cache + security headers) still matches, and add the redirect block.
+- Clean `bun run build`, check bundle size, lazy-load route chunks and heavy images, `loading="lazy"` + width/height on all imagery.
+- No env vars required (fully static, no backend) — confirmed and documented in README.
+- Lighthouse-minded pass: font preconnect, image dimensions, contrast check on the new palette.
+
+## 6. Audit sweep
+
+Re-scan pages, components, data files and metadata for: "Ochiel" in UI copy, "Rachael", pre-2026 founding claims, old domain strings, and any leftover legal-template references — fix all.
+
+## Technical notes
+
+Files touched: `src/index.css`, `tailwind.config.ts`, `index.html`, `vercel.json`, `public/sitemap.xml`, `public/robots.txt`, `src/App.tsx` (search provider + legacy redirects), `src/components/*` (header, hero, spotlight, carousels, new `SiteSearch`, `MegaMenu`, `SearchIndex`), all `src/pages/*`, `src/data/*`. No backend, no new dependencies beyond fonts.
