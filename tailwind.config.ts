@@ -14,9 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Libre Baskerville"', 'Georgia', 'serif'],
-        body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        heading: ['Fraunces', 'Georgia', 'serif'],
+        body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
