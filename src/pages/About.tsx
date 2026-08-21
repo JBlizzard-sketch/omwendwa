@@ -122,16 +122,16 @@ const About = () => (
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Managing Partner</span>
               <h3 className="mt-2 font-heading text-2xl font-bold text-foreground md:text-3xl">Rachel Mwendwa</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Rachel Mwendwa holds a Bachelor of Laws (LLB) from the University of Nairobi and a Post-Graduate Diploma from the Kenya School of Law. She is an Advocate of the High Court of Kenya, a Commissioner for Oaths, a Notary Public, and a member of the Law Society of Kenya.
+                Rachel Mwendwa holds a Bachelor of Laws (LLB) from the University of Nairobi and a Post-Graduate Diploma from the Kenya School of Law. She is an Advocate of the High Court of Kenya and a member of the Law Society of Kenya. Her earlier education includes the International Baccalaureate Diploma Programme, completed in Gaborone, Botswana.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Before co-founding the firm, Rachel gained significant international experience. She worked with the International Lawyers Project, including alongside the Ogiek indigenous community of the Mau Forest on ancestral land and forest rights, and with the African Forum and Network on Debt and Development (AFRODAD) on debt governance across Africa. She also served as a Legal Intern at the Institute for Law and Environmental Governance (ILEG).
+                Before co-founding the firm, Rachel gained significant international experience. She worked with the International Lawyers Project, including alongside the Ogiek indigenous community of the Mau Forest on ancestral land and forest rights, and with the African Forum and Network on Debt and Development (AFRODAD) on debt governance across Africa. She has worked with teams in Kenya, the United Kingdom, Botswana, Zimbabwe and Mozambique.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                A distinguished moot court competitor, Rac was a Grand Finalist at the Africa Human Rights Moot Court Competition, a National Finalist at the Phillip C. Jessup International Moot Court Competition (Kenya Rounds), and has competed in the East African Moot Court Competition. She has authored publications on environmental law, international governance, and fisheries policy, and has been invited to speak at international conferences in Nairobi, Oslo, and Cape Town.
+                Rachel is a decorated advocate-in-competition. She won the African Human Rights Moot Court Competition, the World Bank Law, Justice and Development Student Contest, and the Kenya School of Law Interclass Moot Court Competition. At the age of 20 she was one of only two people selected globally to present before the World Bank Group in Washington, D.C. She competed at the International Criminal Court Moot in The Hague, Netherlands, and went on to coach the firm's Philip C. Jessup team. In her law class of 630 students she was ranked No. 29. She has authored publications on environmental law, international governance, and fisheries policy.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
-                {["LSK Member", "Commissioner for Oaths", "Notary Public", "ICC YAF", "LCIA YIAG", "YICCA", "Environmental Law", "Land Law", "Human Rights"].map((tag) => (
+                {["LSK Member", "African HRMC Champion", "World Bank LJD Contest Winner", "ICC Moot — The Hague", "Jessup Coach", "ICC YAF", "LCIA YIAG", "YICCA", "Environmental Law", "Land Law", "Human Rights"].map((tag) => (
                   <span key={tag} className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-muted-foreground">
                     {tag}
                   </span>

@@ -6,9 +6,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import rachelImg from "@/assets/rachel-mwendwa.jpg";
 
 const credentials = [
-  { icon: Scale, label: "Advocate of the High Court", sub: "Commissioner for Oaths · Notary Public" },
-  { icon: Globe, label: "International practice", sub: "International Lawyers Project · AFRODAD" },
-  { icon: Award, label: "Moot court distinction", sub: "Africa HRMC Grand Finalist · Jessup" },
+  { icon: Scale, label: "Advocate of the High Court", sub: "Law Society of Kenya member" },
+  { icon: Globe, label: "International practice", sub: "Kenya · UK · Botswana · Zimbabwe · Mozambique" },
+  { icon: Award, label: "African HRMC Champion", sub: "World Bank LJD winner · Jessup coach" },
 ];
 
 const ManagingPartnerSpotlight = () => (
