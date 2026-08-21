@@ -3,9 +3,9 @@ import rachelImg from "@/assets/rachel-mwendwa.jpg";
 type Author = { name: string; role: string; img?: string; credential: string };
 
 const partnerDesk: Author = {
-  name: "The Commercial & Tax Desk",
-  role: "Partner — Commercial, Tax & Governance",
-  credential: "CIArb · MAC-accredited mediator · Tax Appeals Tribunal advocate",
+  name: "The Litigation, Commercial & Tax Desk",
+  role: "Partner — Litigation, Commercial, Tax & Governance",
+  credential: "Advocate of the High Court · Tax Appeals Tribunal · Commercial Division litigator",
 };
 
 const authors: Record<string, Author> = {
@@ -15,7 +15,7 @@ const authors: Record<string, Author> = {
     name: "Rachel Mwendwa",
     role: "Managing Partner",
     img: rachelImg,
-    credential: "LSK · ICC YAF · International Lawyers Project · environmental & land law",
+    credential: "LSK · ICC YAF · International Lawyers Project · environmental, land & human rights law",
   },
 };
 

@@ -26,6 +26,10 @@ import Insights from "./pages/Insights";
 import BlogPost from "./pages/BlogPost";
 import LegalTools from "./pages/LegalTools";
 import Contact from "./pages/Contact";
+import PrivacyNotice from "./pages/PrivacyNotice";
+import TermsOfUse from "./pages/TermsOfUse";
+import Consultation from "./pages/Consultation";
+import Series from "./pages/Series";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 
@@ -53,6 +57,10 @@ const AnimatedRoutes = () => {
         <Route path="/insights/:slug" element={<PageTransition><BlogPost /></PageTransition>} />
         <Route path="/legal-tools" element={<PageTransition><LegalTools /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+        <Route path="/privacy-notice" element={<PageTransition><PrivacyNotice /></PageTransition>} />
+        <Route path="/terms-of-use" element={<PageTransition><TermsOfUse /></PageTransition>} />
+        <Route path="/consultation" element={<PageTransition><Consultation /></PageTransition>} />
+        <Route path="/insights/series/:seriesId" element={<PageTransition><Series /></PageTransition>} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
     </AnimatePresence>
