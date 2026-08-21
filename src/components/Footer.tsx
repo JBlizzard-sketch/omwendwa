@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, ExternalLink, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, ExternalLink, Clock, ShieldCheck } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 
 
@@ -135,7 +135,21 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 border-t border-border pt-6 flex flex-col items-center gap-2 text-xs text-muted-foreground">
+      <div className="mt-12 border-t border-border pt-6 flex flex-col items-center gap-3 text-xs text-muted-foreground">
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+          <Link to="/privacy-notice" className="transition-colors hover:text-primary">Privacy Notice</Link>
+          <span className="text-border">·</span>
+          <Link to="/terms-of-use" className="transition-colors hover:text-primary">Terms of Use</Link>
+          <span className="text-border">·</span>
+          <Link to="/contact" className="transition-colors hover:text-primary">Contact</Link>
+        </nav>
+        <div className="flex max-w-2xl items-start gap-2 rounded-md border border-border bg-secondary/30 px-3 py-2 text-center text-[11px] leading-relaxed text-muted-foreground">
+          <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
+          <span>
+            We process personal data in compliance with the Data Protection Act, 2019 (Kenya). Information shared with the firm is protected by advocate–client privilege. See our{" "}
+            <Link to="/privacy-notice" className="font-medium text-primary hover:underline">Privacy Notice</Link>.
+          </span>
+        </div>
         <div>© {new Date().getFullYear()} O. Mwendwa & Company Advocates. All rights reserved.</div>
         <a
           href="https://munuvetech.lovable.app/"
