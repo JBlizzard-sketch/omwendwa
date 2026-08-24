@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Calendar, Clock } from "lucide-react";
+import { findSeriesForPost, seriesPosts } from "@/data/series";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import { blogPosts } from "@/data/blogPosts";
@@ -23,6 +24,11 @@ const BlogPost = () => {
         .sort((a, b) => (a.date < b.date ? 1 : -1))
     : others;
   const otherPosts = [...sameCategory, ...otherCategory].slice(0, 3);
+
+  const seriesInfo = slug ? findSeriesForPost(slug) : null;
+  const partsInSeries = seriesInfo ? seriesPosts(seriesInfo.series) : [];
+  const nextInSeries = seriesInfo ? partsInSeries[seriesInfo.index + 1] : undefined;
+  const prevInSeries = seriesInfo && seriesInfo.index > 0 ? partsInSeries[seriesInfo.index - 1] : undefined;
 
 
   if (!post) {
