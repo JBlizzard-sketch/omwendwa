@@ -9,6 +9,7 @@ import LegalGlossary from "@/components/LegalGlossary";
 import KenyanLawFAQ from "@/components/KenyanLawFAQ";
 import StampDutyCalculator from "@/components/StampDutyCalculator";
 import NoticePeriodCalculator from "@/components/NoticePeriodCalculator";
+import ComplianceChecker from "@/components/ComplianceChecker";
 import TalkToPartnerCTA from "@/components/TalkToPartnerCTA";
 
 
