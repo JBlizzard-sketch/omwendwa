@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Calendar, Clock } from "lucide-react";
+import { findSeriesForPost, seriesPosts } from "@/data/series";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import { blogPosts } from "@/data/blogPosts";
@@ -23,6 +24,11 @@ const BlogPost = () => {
         .sort((a, b) => (a.date < b.date ? 1 : -1))
     : others;
   const otherPosts = [...sameCategory, ...otherCategory].slice(0, 3);
+
+  const seriesInfo = slug ? findSeriesForPost(slug) : null;
+  const partsInSeries = seriesInfo ? seriesPosts(seriesInfo.series) : [];
+  const nextInSeries = seriesInfo ? partsInSeries[seriesInfo.index + 1] : undefined;
+  const prevInSeries = seriesInfo && seriesInfo.index > 0 ? partsInSeries[seriesInfo.index - 1] : undefined;
 
 
   if (!post) {
@@ -106,6 +112,45 @@ const BlogPost = () => {
             </ScrollReveal>
 
             <AuthorByline category={post.category} />
+
+            {seriesInfo && (
+              <div className="mt-6 rounded-xl border border-primary/25 bg-primary/5 p-5">
+                <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                  <BookOpen className="h-3.5 w-3.5" /> Part {seriesInfo.index + 1} of {seriesInfo.total}
+                </div>
+                <Link
+                  to={`/insights/series/${seriesInfo.series.id}`}
+                  className="mt-1 block font-heading text-lg font-bold text-foreground hover:text-primary"
+                >
+                  {seriesInfo.series.title}
+                </Link>
+                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-border">
+                  <div
+                    className="h-full rounded-full bg-primary"
+                    style={{ width: `${((seriesInfo.index + 1) / seriesInfo.total) * 100}%` }}
+                  />
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {prevInSeries && (
+                    <Link to={`/insights/${prevInSeries.slug}`}>
+                      <Button size="sm" variant="outline">
+                        <ArrowLeft className="mr-1 h-3 w-3" /> Previous part
+                      </Button>
+                    </Link>
+                  )}
+                  {nextInSeries && (
+                    <Link to={`/insights/${nextInSeries.slug}`}>
+                      <Button size="sm" className="bg-primary text-primary-foreground">
+                        Next: {nextInSeries.title.slice(0, 42)}
+                        {nextInSeries.title.length > 42 ? "…" : ""} <ArrowRight className="ml-1 h-3 w-3" />
+                      </Button>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            )}
+
+
 
 
 

@@ -6,6 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import { blogPosts, blogCategories } from "@/data/blogPosts";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import SeriesStrip from "@/components/SeriesStrip";
 
 
 const Insights = () => {
@@ -42,6 +43,9 @@ const Insights = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      <SeriesStrip />
+
 
       <section className="bg-card py-16 lg:py-24">
         <div className="container mx-auto px-4">
