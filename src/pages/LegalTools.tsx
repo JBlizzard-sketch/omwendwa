@@ -173,6 +173,9 @@ const LegalTools = () => {
         </div>
       </section>
 
+      {/* Compliance Checkers — statute-backed self-assessments with downloadable reports */}
+      <ComplianceChecker />
+
       {/* Legal Glossary */}
       <LegalGlossary />
 
