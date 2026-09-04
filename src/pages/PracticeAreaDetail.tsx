@@ -1,14 +1,16 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CheckCircle2, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 import ScrollReveal from "@/components/ScrollReveal";
 import CaseDocumentChecklist from "@/components/CaseDocumentChecklist";
 import TalkToPartnerCTA from "@/components/TalkToPartnerCTA";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { practiceAreas } from "@/data/practiceAreas";
 import { practiceImages } from "@/data/practiceImages";
+import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/structuredData";
+import { trackCta } from "@/lib/analytics";
 
 const PracticeAreaDetail = () => {
   const { areaId } = useParams();
@@ -19,29 +21,32 @@ const PracticeAreaDetail = () => {
   const Icon = area.icon;
   const img = practiceImages[area.image];
   const others = practiceAreas.filter((a) => a.id !== area.id).slice(0, 4);
+  const path = `/practice-areas/${area.id}`;
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: area.faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
+  const schemas: Record<string, unknown>[] = [
+    serviceSchema({
+      name: area.title,
+      description: area.description,
+      path,
+      serviceTypes: area.services,
+    }),
+    breadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Practice Areas", path: "/practice-areas" },
+      { name: area.shortTitle, path },
+    ]),
+  ];
+  if (area.faqs.length > 0) schemas.push(faqSchema(area.faqs));
 
   return (
     <>
       <SEOHead
         title={`${area.title} in Kenya`}
         description={area.description.slice(0, 155)}
-        canonical={`https://omwendwa.com/practice-areas/${area.id}`}
+        canonical={`https://omwendwa.com${path}`}
       />
-      {area.faqs.length > 0 && (
-        <Helmet>
-          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        </Helmet>
-      )}
+      <JsonLd data={schemas} />
+
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border pt-28 pb-14 lg:pt-36 lg:pb-20">
