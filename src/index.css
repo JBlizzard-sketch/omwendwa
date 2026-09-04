@@ -6,76 +6,79 @@
 
 @layer base {
   :root {
-    /* Rose Glow — light, bright, alive */
-    --background: 0 0% 100%;
-    --foreground: 336 32% 13%;
+    /* Porcelain Bloom — off-white pastel, bright, legible */
+    --background: 33 45% 98%;
+    --foreground: 337 34% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 336 32% 13%;
+    --card-foreground: 337 34% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 336 32% 13%;
+    --popover-foreground: 337 34% 14%;
 
-    --primary: 348 56% 52%;
+    --primary: 344 55% 44%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 351 100% 97%;
-    --secondary-foreground: 336 32% 13%;
+    --secondary: 348 62% 96%;
+    --secondary-foreground: 337 34% 14%;
 
-    --muted: 340 22% 96%;
-    --muted-foreground: 336 12% 38%;
+    --muted: 336 24% 95%;
+    --muted-foreground: 336 15% 34%;
 
-    --accent: 197 44% 90%;
-    --accent-foreground: 202 46% 22%;
+    --accent: 194 44% 91%;
+    --accent-foreground: 202 48% 20%;
 
-    --destructive: 0 72% 45%;
+    --destructive: 0 66% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 340 22% 90%;
-    --input: 340 22% 88%;
-    --ring: 348 56% 52%;
+    --border: 336 22% 89%;
+    --input: 336 22% 86%;
+    --ring: 344 55% 44%;
 
     --radius: 0.875rem;
 
-    /* Brand scales */
-    --rose: 348 56% 52%;
-    --rose-light: 350 78% 88%;
-    --rose-dark: 344 52% 34%;
-    --blush: 351 100% 97%;
-    --plum: 336 38% 16%;
-    --plum-light: 336 24% 28%;
-    --serene: 197 48% 66%;
-    --serene-light: 197 60% 94%;
-    --serene-dark: 202 46% 30%;
-    --brass: 42 62% 48%;
-    --brass-light: 44 72% 74%;
+    /* Brand scales — pastel family */
+    --rose: 344 55% 44%;
+    --rose-light: 350 72% 90%;
+    --rose-dark: 342 52% 30%;
+    --blush: 348 70% 97%;
+    --plum: 337 38% 17%;
+    --plum-light: 337 24% 30%;
+    --serene: 196 44% 62%;
+    --serene-light: 196 58% 95%;
+    --serene-dark: 202 48% 26%;
+    --brass: 38 48% 40%;
+    --brass-light: 40 62% 78%;
+    --mint: 158 34% 92%;
+    --lilac: 268 44% 95%;
+    --apricot: 26 70% 94%;
 
     /* Legacy aliases kept so existing utilities keep resolving */
-    --gold: 42 62% 48%;
-    --gold-light: 44 72% 74%;
-    --gold-dark: 40 55% 38%;
-    --navy: 336 38% 16%;
-    --navy-light: 340 22% 96%;
-    --navy-surface: 351 100% 97%;
-    --cream: 351 100% 98%;
-    --cream-dark: 340 18% 92%;
+    --gold: 38 48% 40%;
+    --gold-light: 40 62% 78%;
+    --gold-dark: 36 46% 32%;
+    --navy: 337 38% 17%;
+    --navy-light: 336 24% 95%;
+    --navy-surface: 348 70% 97%;
+    --cream: 33 45% 98%;
+    --cream-dark: 34 30% 94%;
 
-    --kenya-red: 0 72% 45%;
-    --kenya-green: 145 55% 32%;
+    --kenya-red: 0 66% 42%;
+    --kenya-green: 145 50% 28%;
 
-    --gradient-rose: linear-gradient(135deg, hsl(350 82% 96%) 0%, hsl(351 100% 99%) 45%, hsl(197 60% 96%) 100%);
-    --gradient-ink: linear-gradient(120deg, hsl(var(--plum)) 0%, hsl(344 46% 26%) 100%);
-    --shadow-soft: 0 1px 2px hsl(336 30% 20% / 0.04), 0 8px 24px -12px hsl(336 30% 20% / 0.12);
-    --shadow-lift: 0 24px 48px -24px hsl(348 56% 52% / 0.28);
+    --gradient-rose: linear-gradient(135deg, hsl(348 70% 97%) 0%, hsl(33 45% 98%) 42%, hsl(196 58% 96%) 100%);
+    --gradient-ink: linear-gradient(120deg, hsl(var(--plum)) 0%, hsl(342 46% 24%) 100%);
+    --shadow-soft: 0 1px 2px hsl(337 30% 20% / 0.04), 0 8px 24px -12px hsl(337 30% 20% / 0.12);
+    --shadow-lift: 0 24px 48px -24px hsl(344 55% 44% / 0.26);
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 336 32% 13%;
-    --sidebar-primary: 348 56% 52%;
+    --sidebar-background: 33 45% 98%;
+    --sidebar-foreground: 337 34% 14%;
+    --sidebar-primary: 344 55% 44%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 351 100% 97%;
-    --sidebar-accent-foreground: 336 32% 13%;
-    --sidebar-border: 340 22% 90%;
-    --sidebar-ring: 348 56% 52%;
+    --sidebar-accent: 348 62% 96%;
+    --sidebar-accent-foreground: 337 34% 14%;
+    --sidebar-border: 336 22% 89%;
+    --sidebar-ring: 344 55% 44%;
   }
 }
 
@@ -160,7 +163,7 @@
   }
   .text-gold-gradient,
   .text-rose-gradient {
-    @apply bg-gradient-to-r from-[hsl(348,56%,52%)] via-[hsl(344,52%,44%)] to-[hsl(202,46%,38%)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(344,55%,44%)] via-[hsl(342,52%,34%)] to-[hsl(202,48%,32%)] bg-clip-text text-transparent;
   }
   .bg-blush-wash {
     background: var(--gradient-rose);

@@ -58,6 +58,9 @@ export default {
           dark: "hsl(var(--rose-dark))",
         },
         blush: "hsl(var(--blush))",
+        mint: "hsl(var(--mint))",
+        lilac: "hsl(var(--lilac))",
+        apricot: "hsl(var(--apricot))",
         plum: {
           DEFAULT: "hsl(var(--plum))",
           light: "hsl(var(--plum-light))",
