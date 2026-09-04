@@ -68,12 +68,12 @@ const PracticeAreaDetail = () => {
             </div>
             <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground lg:text-lg">{area.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => trackCta("cta_consult_click", "practice_area_hero", { practice_area: area.shortTitle })}>
                 <Button size="lg" className="bg-primary font-semibold text-primary-foreground hover:bg-primary/90">
                   Consult on {area.shortTitle} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <a href="tel:+254796759632">
+              <a href="tel:+254796759632" onClick={() => trackCta("cta_call_click", "practice_area_hero", { practice_area: area.shortTitle })}>
                 <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-secondary">
                   <Phone className="mr-2 h-4 w-4" /> +254 796 759 632
                 </Button>
@@ -136,7 +136,7 @@ const PracticeAreaDetail = () => {
                       <li key={s} className="rounded-md border border-border bg-background px-3 py-2 text-xs text-muted-foreground">{s}</li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="mt-6 block">
+                  <Link to="/contact" className="mt-6 block" onClick={() => trackCta("cta_consult_click", "practice_area_sidebar", { practice_area: area.shortTitle })}>
                     <Button className="w-full bg-primary font-semibold text-primary-foreground hover:bg-primary/90">
                       Book a consultation
                     </Button>
