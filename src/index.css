@@ -163,7 +163,7 @@
   }
   .text-gold-gradient,
   .text-rose-gradient {
-    @apply bg-gradient-to-r from-[hsl(348,56%,52%)] via-[hsl(344,52%,44%)] to-[hsl(202,46%,38%)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(344,55%,44%)] via-[hsl(342,52%,34%)] to-[hsl(202,48%,32%)] bg-clip-text text-transparent;
   }
   .bg-blush-wash {
     background: var(--gradient-rose);
