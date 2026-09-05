@@ -99,6 +99,11 @@
     line-height: 1.7;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+    background-image:
+      radial-gradient(60rem 40rem at 8% -10%, hsl(348 80% 92% / 0.75) 0%, transparent 60%),
+      radial-gradient(55rem 38rem at 100% 0%, hsl(196 70% 92% / 0.7) 0%, transparent 62%),
+      radial-gradient(50rem 40rem at 50% 110%, hsl(268 60% 94% / 0.65) 0%, transparent 65%);
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
