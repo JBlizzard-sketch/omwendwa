@@ -50,6 +50,8 @@ const Insights = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  if (slugParam && !activeCategory) return <Navigate to="/insights" replace />;
+
   const canonicalPath = current > 1 ? `${basePath}?page=${current}` : basePath;
   const title = activeCategory
     ? `${activeCategory} — Kenyan Law Articles${current > 1 ? ` (Page ${current})` : ""}`
