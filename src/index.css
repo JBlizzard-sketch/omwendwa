@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Porcelain Bloom — off-white pastel, bright, legible */
-    --background: 33 45% 98%;
+    /* Porcelain Bloom — warm pastel off-white, bright, legible */
+    --background: 28 72% 96%;
     --foreground: 337 34% 14%;
 
     --card: 0 0% 100%;
