@@ -60,13 +60,13 @@
     --navy: 337 38% 17%;
     --navy-light: 336 24% 95%;
     --navy-surface: 348 70% 97%;
-    --cream: 33 45% 98%;
-    --cream-dark: 34 30% 94%;
+    --cream: 28 72% 96%;
+    --cream-dark: 30 52% 92%;
 
     --kenya-red: 0 66% 42%;
     --kenya-green: 145 50% 28%;
 
-    --gradient-rose: linear-gradient(135deg, hsl(348 70% 97%) 0%, hsl(33 45% 98%) 42%, hsl(196 58% 96%) 100%);
+    --gradient-rose: linear-gradient(135deg, hsl(348 78% 95%) 0%, hsl(28 72% 96%) 40%, hsl(196 62% 94%) 72%, hsl(268 54% 96%) 100%);
     --gradient-ink: linear-gradient(120deg, hsl(var(--plum)) 0%, hsl(342 46% 24%) 100%);
     --shadow-soft: 0 1px 2px hsl(337 30% 20% / 0.04), 0 8px 24px -12px hsl(337 30% 20% / 0.12);
     --shadow-lift: 0 24px 48px -24px hsl(344 55% 44% / 0.26);
