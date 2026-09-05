@@ -54,6 +54,7 @@ const AnimatedRoutes = () => {
         <Route path="/practice-areas/:areaId" element={<PageTransition><PracticeAreaDetail /></PageTransition>} />
         <Route path="/results" element={<PageTransition><Results /></PageTransition>} />
         <Route path="/insights" element={<PageTransition><Insights /></PageTransition>} />
+        <Route path="/insights/category/:categorySlug" element={<PageTransition><Insights /></PageTransition>} />
         <Route path="/insights/:slug" element={<PageTransition><BlogPost /></PageTransition>} />
         <Route path="/legal-tools" element={<PageTransition><LegalTools /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />

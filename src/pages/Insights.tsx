@@ -26,8 +26,6 @@ const Insights = () => {
   const activeCategory = slugParam ? categoryFromSlug(slugParam) : undefined;
   const categories = categoryList();
 
-  if (slugParam && !activeCategory) return <Navigate to="/insights" replace />;
-
   const basePath = activeCategory ? `/insights/category/${categorySlug(activeCategory)}` : "/insights";
   const page = Number(params.get("page") ?? 1) || 1;
 
@@ -51,6 +49,8 @@ const Insights = () => {
     setParams(sp);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  if (slugParam && !activeCategory) return <Navigate to="/insights" replace />;
 
   const canonicalPath = current > 1 ? `${basePath}?page=${current}` : basePath;
   const title = activeCategory
