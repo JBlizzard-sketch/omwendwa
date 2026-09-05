@@ -6,11 +6,11 @@
 
 @layer base {
   :root {
-    /* Porcelain Bloom — off-white pastel, bright, legible */
-    --background: 33 45% 98%;
+    /* Porcelain Bloom — warm pastel off-white, bright, legible */
+    --background: 28 72% 96%;
     --foreground: 337 34% 14%;
 
-    --card: 0 0% 100%;
+    --card: 32 60% 99%;
     --card-foreground: 337 34% 14%;
 
     --popover: 0 0% 100%;
@@ -60,13 +60,13 @@
     --navy: 337 38% 17%;
     --navy-light: 336 24% 95%;
     --navy-surface: 348 70% 97%;
-    --cream: 33 45% 98%;
-    --cream-dark: 34 30% 94%;
+    --cream: 28 72% 96%;
+    --cream-dark: 30 52% 92%;
 
     --kenya-red: 0 66% 42%;
     --kenya-green: 145 50% 28%;
 
-    --gradient-rose: linear-gradient(135deg, hsl(348 70% 97%) 0%, hsl(33 45% 98%) 42%, hsl(196 58% 96%) 100%);
+    --gradient-rose: linear-gradient(135deg, hsl(348 78% 95%) 0%, hsl(28 72% 96%) 40%, hsl(196 62% 94%) 72%, hsl(268 54% 96%) 100%);
     --gradient-ink: linear-gradient(120deg, hsl(var(--plum)) 0%, hsl(342 46% 24%) 100%);
     --shadow-soft: 0 1px 2px hsl(337 30% 20% / 0.04), 0 8px 24px -12px hsl(337 30% 20% / 0.12);
     --shadow-lift: 0 24px 48px -24px hsl(344 55% 44% / 0.26);
@@ -99,6 +99,11 @@
     line-height: 1.7;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+    background-image:
+      radial-gradient(60rem 40rem at 8% -10%, hsl(348 80% 92% / 0.75) 0%, transparent 60%),
+      radial-gradient(55rem 38rem at 100% 0%, hsl(196 70% 92% / 0.7) 0%, transparent 62%),
+      radial-gradient(50rem 40rem at 50% 110%, hsl(268 60% 94% / 0.65) 0%, transparent 65%);
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
