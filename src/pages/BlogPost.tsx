@@ -9,6 +9,11 @@ import ReadingProgress from "@/components/ReadingProgress";
 import SocialShare from "@/components/SocialShare";
 import AuthorByline from "@/components/AuthorByline";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import JsonLd from "@/components/JsonLd";
+import { articleSchema, breadcrumbSchema, abs } from "@/lib/structuredData";
+
+/** Date the Insights library was last reviewed against current Kenyan law. */
+export const LAST_REVIEWED = "2026-09-22";
 
 
 const BlogPost = () => {
@@ -89,6 +94,42 @@ const BlogPost = () => {
         description={post.metaDescription}
         type="article"
         canonical={`https://omwendwa.com/insights/${post.slug}`}
+      />
+      <JsonLd
+        data={[
+          articleSchema({
+            title: post.title,
+            description: post.metaDescription,
+            path: `/insights/${post.slug}`,
+            datePublished: post.date,
+            dateModified: LAST_REVIEWED,
+            section: post.category,
+            keywords: [post.category, "Kenyan law", "Nairobi advocates", post.title],
+            wordCount: post.content.split(/\s+/).length,
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Insights", path: "/insights" },
+            { name: post.title, path: `/insights/${post.slug}` },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": `${abs(`/insights/${post.slug}`)}#webpage`,
+            url: abs(`/insights/${post.slug}`),
+            name: post.title,
+            description: post.metaDescription,
+            inLanguage: "en-KE",
+            lastReviewed: LAST_REVIEWED,
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".article-summary"],
+            },
+            about: { "@type": "Thing", name: `${post.category} in Kenya` },
+            isPartOf: { "@id": "https://omwendwa.com/#website" },
+            publisher: { "@id": "https://omwendwa.com/#organization" },
+          },
+        ]}
       />
       <ReadingProgress />
 
