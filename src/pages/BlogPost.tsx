@@ -149,7 +149,11 @@ const BlogPost = () => {
               <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1"><Calendar className="h-4 w-4" /> {post.date}</span>
                 <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {post.readTime}</span>
+                <span>Reviewed {LAST_REVIEWED}</span>
               </div>
+              <p className="article-summary mt-6 rounded-xl border border-border bg-card/70 p-5 text-base leading-relaxed text-foreground">
+                <strong className="font-semibold">In short:</strong> {post.excerpt}
+              </p>
             </ScrollReveal>
 
             <AuthorByline category={post.category} />
