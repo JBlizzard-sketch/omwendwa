@@ -3,7 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { checkTokens } from "@/lib/designTokens";
+import { verifyLiveTokens } from "@/lib/designTokens";
 import { monitoringEnabled, recentErrors } from "@/lib/sentry";
 
 const ROUTES = [
@@ -56,7 +56,7 @@ const Diagnostics = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const tokens = typeof window !== "undefined" ? checkTokens() : [];
+  const tokens = typeof window !== "undefined" ? verifyLiveTokens() : [];
   const errors = recentErrors();
 
   return (
