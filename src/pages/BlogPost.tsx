@@ -10,10 +10,11 @@ import SocialShare from "@/components/SocialShare";
 import AuthorByline from "@/components/AuthorByline";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import JsonLd from "@/components/JsonLd";
-import { articleSchema, breadcrumbSchema, abs } from "@/lib/structuredData";
+import FaqSection from "@/components/FaqSection";
+import { articleSchema, breadcrumbSchema, abs, CONTENT_REVIEWED } from "@/lib/structuredData";
 
 /** Date the Insights library was last reviewed against current Kenyan law. */
-export const LAST_REVIEWED = "2026-09-22";
+export const LAST_REVIEWED = CONTENT_REVIEWED;
 
 
 const BlogPost = () => {

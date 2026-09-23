@@ -3,13 +3,14 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
+import FaqSection from "@/components/FaqSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import CaseDocumentChecklist from "@/components/CaseDocumentChecklist";
 import TalkToPartnerCTA from "@/components/TalkToPartnerCTA";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { practiceAreas } from "@/data/practiceAreas";
 import { practiceImages } from "@/data/practiceImages";
-import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/structuredData";
+import { breadcrumbSchema, faqSchema, serviceSchema, CONTENT_REVIEWED } from "@/lib/structuredData";
 import { trackCta } from "@/lib/analytics";
 
 const PracticeAreaDetail = () => {

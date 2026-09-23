@@ -6,6 +6,9 @@
 export const SITE_URL = "https://omwendwa.com";
 export const FIRM_NAME = "O. Mwendwa & Company Advocates";
 
+/** Date the site content was last reviewed against current Kenyan law. */
+export const CONTENT_REVIEWED = "2026-09-22";
+
 export const abs = (path = "/") => (path.startsWith("http") ? path : `${SITE_URL}${path}`);
 
 export const ORG_ID = `${SITE_URL}/#organization`;
