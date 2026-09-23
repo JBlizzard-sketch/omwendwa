@@ -104,23 +104,17 @@ const PracticeAreaDetail = () => {
                 </ul>
               </ScrollReveal>
 
-              {area.faqs.length > 0 && (
-                <ScrollReveal>
-                  <h2 className="mt-12 font-heading text-2xl font-bold text-foreground">Common Questions</h2>
-                  <Accordion type="single" collapsible className="mt-5 space-y-2">
-                    {area.faqs.map((faq, j) => (
-                      <AccordionItem key={j} value={`faq-${j}`} className="rounded-md border border-border bg-background px-4">
-                        <AccordionTrigger className="py-3 text-left text-sm font-semibold text-foreground hover:no-underline">
-                          {faq.q}
-                        </AccordionTrigger>
-                        <AccordionContent className="pb-3 text-sm leading-relaxed text-muted-foreground">
-                          {faq.a}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </ScrollReveal>
-              )}
+              <ScrollReveal>
+                <FaqSection
+                  faqs={area.faqs}
+                  title={`${area.shortTitle}: common questions`}
+                  intro={`Answers our ${area.shortTitle.toLowerCase()} team gives most often, under Kenyan law.`}
+                  lastUpdated={CONTENT_REVIEWED}
+                  withSchema={false}
+                  idPrefix={`faq-${area.id}`}
+                  className="mt-12"
+                />
+              </ScrollReveal>
 
               <ScrollReveal>
                 <CaseDocumentChecklist area={area} />
