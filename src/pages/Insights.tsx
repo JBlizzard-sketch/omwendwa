@@ -170,6 +170,10 @@ const Insights = () => {
             </div>
           </ScrollReveal>
 
+          <h2 className="mb-6 font-heading text-2xl font-bold text-foreground">
+            {activeCategory && activeCategory !== "All" ? `${activeCategory} articles` : "Latest articles and guides"}
+          </h2>
+
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {items.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 0.06}>
