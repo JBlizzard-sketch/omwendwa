@@ -98,7 +98,7 @@ const Index = () => {
                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-4">{area.description.substring(0, 180)}...</p>
                       </div>
                       <div className="mt-4 flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                        Learn more <ArrowRight className="h-4 w-4" />
+                        Learn more about {area.shortTitle} <ArrowRight className="h-4 w-4" />
                       </div>
                     </Link>
                   </motion.div>
