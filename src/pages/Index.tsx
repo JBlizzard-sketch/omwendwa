@@ -268,7 +268,7 @@ const Index = () => {
                 <div className="mt-6 flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">{featuredPost.date} · {featuredPost.readTime}</span>
                   <Link to={`/insights/${featuredPost.slug}`} className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-                    Read more <ArrowRight className="h-4 w-4" />
+                    Read the full article <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
               </div>
