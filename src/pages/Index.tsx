@@ -98,7 +98,7 @@ const Index = () => {
                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-4">{area.description.substring(0, 180)}...</p>
                       </div>
                       <div className="mt-4 flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                        Learn more <ArrowRight className="h-4 w-4" />
+                        Learn more about {area.shortTitle} <ArrowRight className="h-4 w-4" />
                       </div>
                     </Link>
                   </motion.div>
@@ -123,7 +123,7 @@ const Index = () => {
                         <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-3">{area.description.substring(0, 120)}...</p>
                       </div>
                       <div className="mt-3 flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                        Learn more <ArrowRight className="h-4 w-4" />
+                        Learn more about {area.shortTitle} <ArrowRight className="h-4 w-4" />
                       </div>
                     </Link>
                   </motion.div>
@@ -268,7 +268,7 @@ const Index = () => {
                 <div className="mt-6 flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">{featuredPost.date} · {featuredPost.readTime}</span>
                   <Link to={`/insights/${featuredPost.slug}`} className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-                    Read more <ArrowRight className="h-4 w-4" />
+                    Read the full article <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
               </div>
