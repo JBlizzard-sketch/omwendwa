@@ -7,10 +7,26 @@ export interface BlogPost {
   readTime: string;
   content: string;
   metaDescription: string;
+  /** Optional FAQs rendered on the article and published as FAQPage structured data. */
+  faqs?: { q: string; a: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
   {
+    faqs: [
+      {
+        q: "Which businesses now pay Digital Services Tax in Kenya?",
+        a: "Digital Services Tax applies at 1.5% of gross transaction value. It previously covered only non-resident digital service providers, but now also applies to resident companies offering digital marketplace services — online marketplaces, payment platforms and digital intermediaries.",
+      },
+      {
+        q: "What is the withholding tax rate on professional fees?",
+        a: "Withholding tax on professional fees paid to resident persons moved from 5% to 7.5%. This covers legal fees, consultancy payments and management fees. Cross-border service payments are withheld at 20%, subject to relief under an applicable Double Taxation Agreement.",
+      },
+      {
+        q: "How often must my business file tax returns now?",
+        a: "The Kenya Revenue Authority requires quarterly digital tax filings for registered businesses, replacing the previous annual filing cycle for SMEs. Companies with turnover below KES 50 million also benefit from a graduated corporate tax rate starting at 15%.",
+      },
+    ],
     slug: "kenya-new-tax-laws-2026",
     title: "Understanding Kenya's New Tax Laws: What Businesses Need to Know in 2026",
     excerpt: "The Finance Act 2025 introduced sweeping changes to corporate and individual tax obligations. Here's what every Kenyan business must do to stay compliant.",
@@ -53,6 +69,16 @@ At O. Mwendwa & Company Advocates, our tax advisory team works with businesses t
 **Don't wait for a KRA audit to discover gaps in your compliance.** Contact us today for a confidential tax health check.`
   },
   {
+    faqs: [
+      {
+        q: "What does a surviving spouse inherit if there is no will in Kenya?",
+        a: "Under intestate succession, the surviving spouse takes the deceased's personal and household effects absolutely, plus a life interest in the remainder of the estate. The children share the residuary estate equally.",
+      },
+      {
+        q: "Do my children inherit equally under Kenyan law?",
+        a: "Yes. Under intestate succession the children share equally in the residuary estate, subject to the surviving spouse's life interest in it.",
+      },
+    ],
     slug: "succession-planning-kenyan-law",
     title: "A Complete Guide to Succession Planning Under Kenyan Law",
     excerpt: "Dying without a will in Kenya can leave your family in a costly legal battle. Learn how the Law of Succession Act protects — and limits — your estate wishes.",

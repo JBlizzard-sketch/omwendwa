@@ -7,7 +7,6 @@ import FaqSection from "@/components/FaqSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import CaseDocumentChecklist from "@/components/CaseDocumentChecklist";
 import TalkToPartnerCTA from "@/components/TalkToPartnerCTA";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { practiceAreas } from "@/data/practiceAreas";
 import { practiceImages } from "@/data/practiceImages";
 import { breadcrumbSchema, faqSchema, serviceSchema, CONTENT_REVIEWED } from "@/lib/structuredData";
