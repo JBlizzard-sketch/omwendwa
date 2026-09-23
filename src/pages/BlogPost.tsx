@@ -207,6 +207,18 @@ const BlogPost = () => {
             </ScrollReveal>
 
 
+            {post.faqs && post.faqs.length > 0 && (
+              <ScrollReveal delay={0.1}>
+                <FaqSection
+                  faqs={post.faqs}
+                  intro="Short answers to the questions readers ask most about this topic."
+                  lastUpdated={LAST_REVIEWED}
+                  idPrefix={`faq-${post.slug}`}
+                  className="mt-12 border-t border-border pt-8"
+                />
+              </ScrollReveal>
+            )}
+
             <ScrollReveal delay={0.15}>
               <div className="mt-10 border-t border-border pt-6">
                 <SocialShare title={post.title} />
