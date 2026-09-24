@@ -64,6 +64,7 @@ const Diagnostics = () => {
       <SEOHead
         title="Site diagnostics"
         description="Internal build, domain and route health checks for O. Mwendwa & Company Advocates."
+        noindex
       />
       <h1 className="font-heading text-4xl mb-2">Site diagnostics</h1>
       <p className="text-muted-foreground mb-8">
