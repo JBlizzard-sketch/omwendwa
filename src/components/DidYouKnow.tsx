@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Lightbulb, AlertTriangle, Scale, Shield, FileText, Landmark, Home, Briefcase, Wifi, Gavel, Users, HeartHandshake } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
+import SeeMoreButton from "./SeeMoreButton";
 
 const tips = [
   {
@@ -168,7 +169,9 @@ const FlipCard = ({ tip, index }: { tip: typeof tips[0]; index: number }) => {
   );
 };
 
-const DidYouKnow = () => (
+const DidYouKnow = () => {
+  const [expanded, setExpanded] = useState(false);
+  return (
   <section className="bg-background py-20 lg:py-28 overflow-hidden">
     <div className="container mx-auto px-4">
       <ScrollReveal>
@@ -183,12 +186,19 @@ const DidYouKnow = () => (
       </ScrollReveal>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {tips.map((tip, i) => (
+        {(expanded ? tips : tips.slice(0, 4)).map((tip, i) => (
           <FlipCard key={i} tip={tip} index={i} />
         ))}
       </div>
+      <SeeMoreButton
+        expanded={expanded}
+        onToggle={() => setExpanded((v) => !v)}
+        totalCount={tips.length}
+        noun="legal tips"
+      />
     </div>
   </section>
-);
+  );
+};
 
 export default DidYouKnow;

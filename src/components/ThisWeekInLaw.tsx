@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, TrendingUp } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import SeeMoreButton from "./SeeMoreButton";
 import { motion } from "framer-motion";
 
 const updates = [
@@ -30,7 +32,9 @@ const updates = [
   },
 ];
 
-const ThisWeekInLaw = () => (
+const ThisWeekInLaw = () => {
+  const [expanded, setExpanded] = useState(false);
+  return (
   <section className="bg-card py-20 lg:py-28">
     <div className="container mx-auto px-4">
       <ScrollReveal>
@@ -51,7 +55,7 @@ const ThisWeekInLaw = () => (
       </ScrollReveal>
 
       <div className="grid gap-4 md:grid-cols-2">
-        {updates.map((update, i) => (
+        {(expanded ? updates : updates.slice(0, 2)).map((update, i) => (
           <ScrollReveal key={i} delay={i * 0.08}>
             <motion.div
               whileHover={{ y: -3 }}
@@ -82,6 +86,13 @@ const ThisWeekInLaw = () => (
         ))}
       </div>
 
+      <SeeMoreButton
+        expanded={expanded}
+        onToggle={() => setExpanded((v) => !v)}
+        totalCount={updates.length}
+        noun="updates"
+      />
+
       <div className="mt-6 text-center sm:hidden">
         <Link to="/insights" className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
           View all insights <ArrowRight className="h-4 w-4" />
@@ -89,6 +100,7 @@ const ThisWeekInLaw = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default ThisWeekInLaw;

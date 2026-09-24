@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Users, Award, Briefcase, Scale } from "lucide-react";
+import SeeMoreButton from "@/components/SeeMoreButton";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -24,6 +26,7 @@ import { motion } from "framer-motion";
 const Index = () => {
   const featuredPost = blogPosts[0];
   const featuredTestimonial = testimonials[0];
+  const [showAllAreas, setShowAllAreas] = useState(false);
 
   return (
     <>
@@ -106,7 +109,7 @@ const Index = () => {
               );
             })}
 
-            {practiceAreas.slice(1).map((area, i) => {
+            {practiceAreas.slice(1, showAllAreas ? undefined : 6).map((area, i) => {
               const Icon = area.icon;
               return (
                 <ScrollReveal key={area.id} delay={(i + 1) * 0.08}>
@@ -131,6 +134,14 @@ const Index = () => {
               );
             })}
           </div>
+          {practiceAreas.length - 1 > 5 && (
+            <SeeMoreButton
+              expanded={showAllAreas}
+              onToggle={() => setShowAllAreas((v) => !v)}
+              totalCount={practiceAreas.length}
+              noun="practice areas"
+            />
+          )}
         </div>
       </section>
 
