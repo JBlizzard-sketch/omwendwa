@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Star } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import SeeMoreButton from "@/components/SeeMoreButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import { testimonials, firmStats } from "@/data/testimonials";
 import { motion } from "framer-motion";
@@ -11,7 +13,9 @@ import TalkToPartnerCTA from "@/components/TalkToPartnerCTA";
 
 
 
-const Results = () => (
+const Results = () => {
+  const [showAllTestimonials, setShowAllTestimonials] = useState(false);
+  return (
   <>
     <SEOHead
       title="Results & Testimonials — Client Success Stories"
@@ -52,7 +56,7 @@ const Results = () => (
           <h2 className="mb-12 font-heading text-3xl font-bold text-foreground">Client Testimonials</h2>
         </ScrollReveal>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t, i) => (
+          {(showAllTestimonials ? testimonials : testimonials.slice(0, 6)).map((t, i) => (
             <ScrollReveal key={i} delay={i * 0.08}>
               <motion.div whileHover={{ y: -4 }} className="flex h-full flex-col justify-between rounded-lg border border-border bg-secondary/30 p-6 transition-shadow hover:shadow-lg hover:shadow-primary/5">
                 <div>
@@ -71,13 +75,22 @@ const Results = () => (
             </ScrollReveal>
           ))}
         </div>
+        {testimonials.length > 6 && (
+          <SeeMoreButton
+            expanded={showAllTestimonials}
+            onToggle={() => setShowAllTestimonials((v) => !v)}
+            totalCount={testimonials.length}
+            noun="testimonials"
+          />
+        )}
       </div>
     </section>
 
     {/* CTA */}
     <TalkToPartnerCTA heading="Your case could be our next success story" subheading="Tell us what you're up against. We'll tell you, plainly, whether and how we can help." />
   </>
-);
+  );
+};
 
 export default Results;
 
