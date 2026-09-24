@@ -57,3 +57,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://omwendwa.com/sitemap.xml
+
+# Private diagnostics page
+User-agent: *
+Disallow: /diagnostics

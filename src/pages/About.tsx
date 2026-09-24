@@ -14,7 +14,7 @@ const About = () => (
   <>
     <SEOHead
       title="About the Firm — Our Advocates & Story"
-      description="Learn about O. Mwendwa & Company Advocates, a Nairobi law firm founded on integrity, clarity, and results. Meet Managing Partner Rachel Mwendwa and our partnership."
+      description="Meet O. Mwendwa & Company Advocates, a Nairobi law firm founded in March 2026, and Managing Partner Rachel Mwendwa."
     />
 
     {/* Hero */}
