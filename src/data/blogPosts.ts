@@ -425,6 +425,183 @@ export const blogCategories = ["All", "Kenyan Law Updates", "Legal Guides", "Com
 
 export const newBlogPosts: BlogPost[] = [
   {
+    slug: "data-protection-act-kenya-business-compliance-guide",
+    title: "Data Protection Act 2019: A Practical Compliance Guide for Kenyan Businesses",
+    excerpt: "If your business collects names, phone numbers or ID numbers, the Data Protection Act applies to you. Here is what registration, consent and breach reporting mean in practice.",
+    category: "Legal Guides",
+    date: "2026-09-24",
+    readTime: "7 min read",
+    metaDescription: "How Kenya's Data Protection Act 2019 applies to your business: ODPC registration, lawful processing, data subject rights, breach notification within 72 hours and penalties.",
+    faqs: [
+      { q: "Does my business need to register with the ODPC?", a: "Most businesses that collect and use personal data must register as data controllers or processors with the Office of the Data Protection Commissioner under the 2021 Registration Regulations. Some very small entities are exempt, but many sectors (health, education, finance, hospitality, property) must register regardless of size." },
+      { q: "How quickly must a data breach be reported?", a: "Section 43 of the Data Protection Act requires a data controller to notify the Data Protection Commissioner within 72 hours of becoming aware of a breach that poses a real risk of harm, and to inform affected people where appropriate." },
+      { q: "What are the penalties for breaching the Act?", a: "The Commissioner can issue enforcement notices and administrative fines of up to KES 5 million or 1% of the previous year's annual turnover, whichever is lower. Affected individuals may also claim compensation." },
+    ],
+    content: `Kenya's Data Protection Act, 2019 applies to almost every business that handles information about identifiable people — customers, employees, tenants or patients. Compliance is no longer a "nice to have": the Office of the Data Protection Commissioner (ODPC) actively investigates complaints and issues fines.
+
+## Who the Act applies to
+
+The Act applies to **data controllers** (who decide why and how personal data is used) and **data processors** (who handle data on a controller's behalf). If you keep a customer list, run payroll or use CCTV, you are processing personal data.
+
+## Step 1: Register with the ODPC
+
+The Data Protection (Registration of Data Controllers and Data Processors) Regulations, 2021 require most controllers and processors to register. Registration is renewable and the ODPC publishes a list of mandatory sectors.
+
+## Step 2: Have a lawful basis
+
+Under the Act, personal data must be processed lawfully, fairly and transparently, collected for a specific purpose, and kept no longer than necessary. Consent must be freely given and can be withdrawn. Other lawful bases include performance of a contract and legal obligations.
+
+## Step 3: Respect data subject rights
+
+Section 26 gives people the right to be informed, to access their data, to object, and to have false or misleading data corrected or deleted. Build a simple process to respond to these requests.
+
+## Step 4: Plan for breaches
+
+Notify the Commissioner within **72 hours** of becoming aware of a breach that risks harm (section 43). Keep an internal breach register and a response plan.
+
+## Step 5: Contracts and cross-border transfers
+
+Put written data processing terms in place with vendors, and check the safeguards required before transferring data outside Kenya.
+
+## A quick compliance checklist
+
+- ODPC registration certificate current
+- Privacy notice on your website and forms
+- Consent wording reviewed
+- Data processing agreements with suppliers
+- Breach response plan and register
+- Staff trained on handling personal data
+
+## How we can help
+
+O. Mwendwa & Company Advocates reviews privacy notices, drafts data processing agreements and prepares businesses for ODPC registration and audits. **Book a consultation** to get a tailored compliance plan.`
+  },
+  {
+    slug: "beneficial-ownership-kenya-companies-filing-guide",
+    title: "Beneficial Ownership in Kenya: What Every Company Must File",
+    excerpt: "Every Kenyan company must know — and disclose — the real people who own or control it. Here is who counts as a beneficial owner and how to stay compliant.",
+    category: "Kenyan Law Updates",
+    date: "2026-09-17",
+    readTime: "5 min read",
+    metaDescription: "Kenya beneficial ownership guide: who qualifies under the Companies Act 2015 and 2020 Regulations, what to file with the Business Registration Service, and the risks of non-compliance.",
+    faqs: [
+      { q: "Who is a beneficial owner of a Kenyan company?", a: "A natural person who ultimately owns or controls the company — for example by holding at least 10% of the shares or voting rights, having the right to appoint or remove a director, or exercising significant influence or control." },
+      { q: "Where is beneficial ownership information filed?", a: "Companies keep a register of beneficial owners and lodge a copy with the Registrar of Companies through the Business Registration Service eCitizen portal, and must update it when details change." },
+    ],
+    content: `Section 93A of the Companies Act, 2015 and the Companies (Beneficial Ownership Information) Regulations, 2020 require every company to identify the real people behind it. Banks, KRA and procurement bodies increasingly check this information before dealing with you.
+
+## Who counts as a beneficial owner?
+
+A beneficial owner is a **natural person** (not a company) who, directly or indirectly:
+
+- holds at least 10% of the issued shares,
+- exercises at least 10% of the voting rights,
+- holds a right to appoint or remove a director, or
+- exercises significant influence or control over the company.
+
+## What you must do
+
+1. Identify every beneficial owner, looking through any corporate shareholders.
+2. Keep a register of beneficial owners at the company's office.
+3. Lodge a copy with the Registrar through the Business Registration Service portal.
+4. File updates when ownership or control changes.
+
+## Why it matters
+
+Missing or inaccurate filings can block company searches, delay bank account openings and tender applications, and expose the company and its officers to penalties. Clean records also make due diligence faster when you raise capital or sell the business.
+
+## How we can help
+
+We trace ownership chains, prepare registers and handle filings on eCitizen. **Book a consultation** for a beneficial ownership health check.`
+  },
+  {
+    slug: "buying-land-kenya-due-diligence-checklist",
+    title: "Buying Land in Kenya: A Due Diligence Checklist Before You Pay",
+    excerpt: "Most land fraud is preventable. These are the checks to run before you sign a sale agreement or hand over a deposit.",
+    category: "Legal Guides",
+    date: "2026-09-10",
+    readTime: "7 min read",
+    metaDescription: "Step-by-step due diligence for buying land in Kenya: official search, survey maps, Land Control Board consent, rates clearance, stamp duty and safe payment of the purchase price.",
+    faqs: [
+      { q: "How much is stamp duty on land in Kenya?", a: "Stamp duty on transfer of land is generally 4% of the value for property within a municipality and 2% for property outside one, based on the government valuation." },
+      { q: "When is Land Control Board consent needed?", a: "Under the Land Control Act, consent of the local Land Control Board is required for sales, leases and subdivisions of agricultural land in controlled areas. A transaction without consent within the required period can become void." },
+      { q: "Should I pay the full price before transfer?", a: "No. The safest practice is to pay a deposit on signing and hold the balance with the advocates, released only once the transfer is registered in your name." },
+    ],
+    content: `Land is the biggest purchase most Kenyans make — and the most common target for fraud. A careful due diligence process, led by an advocate, protects your money.
+
+## 1. Official search
+
+Run an official search at the land registry or on ArdhiSasa where available. Confirm the registered owner, the size of the land, and any charges, cautions or restrictions on the title.
+
+## 2. Verify the seller
+
+Match the seller's national ID and KRA PIN to the title. For companies, run a company search and confirm who can sign. For land held by a deceased person, insist on a confirmed grant of letters of administration.
+
+## 3. Survey and site visit
+
+Obtain the registry index map, engage a licensed surveyor to confirm beacons, and visit the land. Speak to neighbours and the local administration about any disputes or occupants.
+
+## 4. Planning and rates
+
+Check zoning and approved use with the county, and obtain a rates clearance certificate and land rent clearance (for leaseholds).
+
+## 5. Consents
+
+Agricultural land usually needs **Land Control Board consent** under the Land Control Act. Leaseholds may need the lessor's consent. Spousal consent may be required for matrimonial property under the Land Registration Act, 2012.
+
+## 6. Sale agreement and payment
+
+Use a written agreement that follows the Law Society Conditions of Sale. Pay a deposit, hold the balance with advocates, and release it only on registration of the transfer.
+
+## 7. Stamp duty and registration
+
+After valuation, pay stamp duty (4% in municipalities, 2% elsewhere) and lodge the transfer for registration. Collect the new title in your name.
+
+## How we can help
+
+Our conveyancing team handles searches, consents, agreements and registration end-to-end. **Book a consultation** before you pay any deposit.`
+  },
+  {
+    slug: "debt-recovery-kenya-small-claims-court-guide",
+    title: "Recovering Debts in Kenya: Demand Letters, Small Claims Court and Beyond",
+    excerpt: "Unpaid invoices drain cash flow. Here is the fastest lawful route to getting paid, from a demand letter to the Small Claims Court and enforcement.",
+    category: "Legal Guides",
+    date: "2026-09-03",
+    readTime: "6 min read",
+    metaDescription: "How to recover debts in Kenya: demand letters, the Small Claims Court (claims up to KES 1 million), High Court suits, and enforcing judgments through attachment and garnishee orders.",
+    faqs: [
+      { q: "What is the limit of the Small Claims Court?", a: "The Small Claims Court handles civil claims of up to KES 1 million, including unpaid goods and services, contracts and money lent, and aims to determine matters within 60 days of filing." },
+      { q: "How long do I have to sue for a debt?", a: "Under the Limitation of Actions Act, claims founded on contract generally must be filed within six years from when the debt fell due." },
+    ],
+    content: `Debt recovery works best when it is quick, documented and escalated in steps. Kenyan law gives creditors effective tools — if they are used correctly.
+
+## Step 1: Gather your evidence
+
+Collect the contract or LPO, invoices, delivery notes, statements and any message where the debtor acknowledges the debt.
+
+## Step 2: Send a formal demand letter
+
+An advocate's demand letter sets a clear deadline and warns of court action. Many debts are paid or settled at this stage, and the letter is useful evidence if you later claim costs.
+
+## Step 3: Choose the right forum
+
+- **Small Claims Court** — claims up to **KES 1 million** under the Small Claims Court Act, 2016. Procedure is simple and matters are meant to be decided within 60 days.
+- **Magistrates' Courts and High Court** — larger or more complex claims, including those needing summary judgment.
+- **Arbitration or mediation** — where your contract requires it.
+
+## Step 4: Enforce the judgment
+
+A judgment is only useful if enforced. Options include attachment and sale of movable property through auctioneers, garnishee orders against the debtor's bank account, and, for companies, insolvency proceedings under the Insolvency Act, 2015.
+
+## Watch the time limit
+
+Contract debts generally become time-barred six years after they fall due under the Limitation of Actions Act. Do not wait.
+
+## How we can help
+
+We send demand letters, file and argue claims, and drive enforcement — with litigation at the heart of our practice. **Book a consultation** to start recovering what you are owed.`
+  },
+  {
     slug: "employment-law-kenyan-workers-rights",
     title: "Employment Law: What Every Kenyan Worker Must Know",
     excerpt: "From unfair dismissal to unpaid overtime, Kenyan employment law provides strong protections for workers. Here's what you need to know to protect your rights.",
