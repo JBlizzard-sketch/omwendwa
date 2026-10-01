@@ -26,3 +26,9 @@ Jurisdiction: Republic of Kenya
 - Articles cite Kenyan statutes (Employment Act 2007, Law of Succession Act, Land Registration Act 2012,
   Data Protection Act 2019, Companies Act 2015, Finance Acts) and are updated as the law changes.
 - Structured data (LegalService, LawFirm, Person, Service, FAQPage, Article, BreadcrumbList) is published on every page.
+
+## Latest guides (September 2026)
+- [Data Protection Act 2019 compliance guide](https://omwendwa.com/insights/data-protection-act-kenya-business-compliance-guide)
+- [Beneficial ownership filing in Kenya](https://omwendwa.com/insights/beneficial-ownership-kenya-companies-filing-guide)
+- [Buying land in Kenya: due diligence checklist](https://omwendwa.com/insights/buying-land-kenya-due-diligence-checklist)
+- [Debt recovery and the Small Claims Court](https://omwendwa.com/insights/debt-recovery-kenya-small-claims-court-guide)

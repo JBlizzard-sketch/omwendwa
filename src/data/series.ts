@@ -22,6 +22,9 @@ export const series: Series[] = [
       "corporate-governance-kenyan-smes",
       "kenya-new-tax-laws-2026",
       "commercial-disputes-adr-vs-litigation-kenya",
+      "data-protection-act-kenya-business-compliance-guide",
+      "beneficial-ownership-kenya-companies-filing-guide",
+      "debt-recovery-kenya-small-claims-court-guide",
     ],
   },
   {
@@ -40,7 +43,7 @@ export const series: Series[] = [
     description:
       "Title, boundaries, evictions, contracts, terminations and redundancy. Two subjects that generate more litigation in Kenya than almost anything else, explained in plain language.",
     accent: "from-secondary to-secondary/30",
-    postSlugs: ["land-disputes-kenya-property-owners", "employment-law-kenyan-workers-rights"],
+    postSlugs: ["land-disputes-kenya-property-owners", "buying-land-kenya-due-diligence-checklist", "employment-law-kenyan-workers-rights"],
   },
 ];
 
