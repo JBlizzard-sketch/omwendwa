@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { fetchTakenSlots, submitForm } from "@/lib/submitForm";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
