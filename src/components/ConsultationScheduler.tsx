@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { fetchTakenSlots, submitForm } from "@/lib/submitForm";
 import { Calendar as CalendarIcon, Clock, ArrowRight, Video, Building2, Phone, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,14 +49,25 @@ const ConsultationScheduler = () => {
   const [summary, setSummary] = useState("");
 
   const canSubmit = date && time && practiceArea && name && email && summary;
+  const [taken, setTaken] = useState<Set<string>>(new Set());
+  const refreshTaken = () =>
+    fetchTakenSlots(formatDateValue(days[0]), formatDateValue(days[days.length - 1])).then(setTaken);
+  useEffect(() => { refreshTaken(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!canSubmit) {
       toast("Please complete the required fields");
       return;
     }
-    toast("Consultation request sent — we'll confirm within 4 business hours");
+    const extra = [opposingParty && `Opposing party: ${opposingParty}`, priorAdvocate && `Prior advocate: ${priorAdvocate}`].filter(Boolean).join("\n");
+    const res = await submitForm({
+      kind: "booking", name, email, phone, practice_area: practiceArea, urgency,
+      summary: extra ? `${summary}\n\n${extra}` : summary, mode, slot_date: date, slot_time: time,
+    });
+    refreshTaken();
+    if (!res.ok) { toast(res.error ?? "Could not book"); return; }
+    toast(`Booked — reference ${res.reference}. We'll confirm within 4 business hours`);
     setName("");
     setEmail("");
     setPhone("");
@@ -123,12 +135,14 @@ const ConsultationScheduler = () => {
               <div className="grid grid-cols-3 gap-2">
                 {TIME_SLOTS.map((slot) => {
                   const active = slot === time;
+                  const isTaken = taken.has(`${date}|${slot}`);
                   return (
                     <button
                       key={slot}
                       type="button"
+                      disabled={isTaken}
                       onClick={() => setTime(slot)}
-                      className={`rounded-lg border px-3 py-2 text-xs font-semibold transition-all ${
+                      className={`rounded-lg border px-3 py-2 text-xs font-semibold transition-all disabled:cursor-not-allowed disabled:opacity-40 disabled:line-through ${
                         active
                           ? "border-primary bg-primary text-primary-foreground"
                           : "border-border bg-secondary/30 text-muted-foreground hover:border-primary/40 hover:text-foreground"

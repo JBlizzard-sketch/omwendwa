@@ -3,6 +3,7 @@ import { Mail, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { submitForm } from "@/lib/submitForm";
 
 const STORAGE_KEY = "omca:newsletter";
 
@@ -13,9 +14,14 @@ const NewsletterSignup = ({ compact = false }: { compact?: boolean }) => {
     typeof window !== "undefined" ? !!localStorage.getItem(STORAGE_KEY) : false
   );
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.includes("@")) return;
+    const res = await submitForm({ kind: "newsletter", email });
+    if (!res.ok) {
+      toast({ title: "Not subscribed", description: res.error, variant: "destructive" });
+      return;
+    }
     localStorage.setItem(STORAGE_KEY, email);
     setDone(true);
     toast({

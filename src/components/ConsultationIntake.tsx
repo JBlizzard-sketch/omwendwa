@@ -82,7 +82,13 @@ const ConsultationIntake = () => {
     return true;
   };
 
-  const submit = () => {
+  const [takenSlots, setTakenSlots] = useState<Set<string>>(new Set());
+  const [sending, setSending] = useState(false);
+  const refreshTaken = () =>
+    fetchTakenSlots(formatDateValue(days[0]), formatDateValue(days[days.length - 1])).then(setTakenSlots);
+  useEffect(() => { refreshTaken(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const submit = async () => {
     const parsed = schema.safeParse({ name, email, phone, summary });
     if (!parsed.success) {
       const next: Record<string, string> = {};
@@ -94,9 +100,21 @@ const ConsultationIntake = () => {
       return;
     }
     setErrors({});
-    const ref = `OM-${date.replace(/-/g, "").slice(4)}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
-    setReference(ref);
-    toast("Consultation request received — confirmation on its way");
+    if (sending) return;
+    setSending(true);
+    const res = await submitForm({
+      kind: "booking", name, email, phone, practice_area: area?.title ?? areaId, urgency,
+      summary, mode, slot_date: date, slot_time: time,
+    });
+    setSending(false);
+    refreshTaken();
+    if (!res.ok || !res.reference) {
+      toast(res.error ?? "Could not book that slot");
+      if (res.error?.includes("taken")) { setTime(""); setStep(2); }
+      return;
+    }
+    setReference(res.reference);
+    toast("Consultation request received — we'll confirm shortly");
   };
 
   const reset = () => {
@@ -323,7 +341,7 @@ const ConsultationIntake = () => {
                 </div>
                 <div className="mt-3 grid grid-cols-3 gap-2">
                   {TIME_SLOTS.map((slot) => {
-                    const taken = slotTaken(date, slot);
+                    const taken = takenSlots.has(`${date}|${slot}`);
                     const active = slot === time;
                     return (
                       <button
