@@ -14,13 +14,144 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      consultation_bookings: {
+        Row: {
+          consent_privacy: boolean
+          created_at: string
+          email: string
+          id: string
+          ip_hash: string | null
+          mode: string
+          name: string
+          phone: string | null
+          practice_area: string
+          reference: string
+          slot_date: string
+          slot_time: string
+          status: string
+          summary: string
+          urgency: string | null
+        }
+        Insert: {
+          consent_privacy?: boolean
+          created_at?: string
+          email: string
+          id?: string
+          ip_hash?: string | null
+          mode?: string
+          name: string
+          phone?: string | null
+          practice_area: string
+          reference: string
+          slot_date: string
+          slot_time: string
+          status?: string
+          summary: string
+          urgency?: string | null
+        }
+        Update: {
+          consent_privacy?: boolean
+          created_at?: string
+          email?: string
+          id?: string
+          ip_hash?: string | null
+          mode?: string
+          name?: string
+          phone?: string | null
+          practice_area?: string
+          reference?: string
+          slot_date?: string
+          slot_time?: string
+          status?: string
+          summary?: string
+          urgency?: string | null
+        }
+        Relationships: []
+      }
+      enquiries: {
+        Row: {
+          consent_privacy: boolean
+          created_at: string
+          email: string
+          id: string
+          ip_hash: string | null
+          message: string
+          name: string
+          phone: string | null
+          practice_area: string | null
+          source: string
+          status: string
+          urgency: string | null
+        }
+        Insert: {
+          consent_privacy?: boolean
+          created_at?: string
+          email: string
+          id?: string
+          ip_hash?: string | null
+          message: string
+          name: string
+          phone?: string | null
+          practice_area?: string | null
+          source?: string
+          status?: string
+          urgency?: string | null
+        }
+        Update: {
+          consent_privacy?: boolean
+          created_at?: string
+          email?: string
+          id?: string
+          ip_hash?: string | null
+          message?: string
+          name?: string
+          phone?: string | null
+          practice_area?: string | null
+          source?: string
+          status?: string
+          urgency?: string | null
+        }
+        Relationships: []
+      }
+      newsletter_subscribers: {
+        Row: {
+          consent_at: string
+          created_at: string
+          email: string
+          id: string
+          ip_hash: string | null
+          status: string
+        }
+        Insert: {
+          consent_at?: string
+          created_at?: string
+          email: string
+          id?: string
+          ip_hash?: string | null
+          status?: string
+        }
+        Update: {
+          consent_at?: string
+          created_at?: string
+          email?: string
+          id?: string
+          ip_hash?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_taken_slots: {
+        Args: { _from: string; _to: string }
+        Returns: {
+          slot_date: string
+          slot_time: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
