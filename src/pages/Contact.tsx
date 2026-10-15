@@ -8,6 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useToast } from "@/hooks/use-toast";
 import ConsultationScheduler from "@/components/ConsultationScheduler";
+import { submitForm } from "@/lib/submitForm";
 
 const caseTypes = [
   "Tax Compliance & Advisory",
@@ -32,8 +33,24 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSending(true);
+    const res = await submitForm({
+      kind: "enquiry",
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      practice_area: formData.caseType,
+      urgency: formData.urgency,
+      message: formData.message,
+    });
+    setSending(false);
+    if (!res.ok) {
+      toast({ title: "Not sent", description: res.error, variant: "destructive" });
+      return;
+    }
     toast({
       title: "Inquiry Submitted",
       description: "Thank you. We'll respond within 24 business hours.",
