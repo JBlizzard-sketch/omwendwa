@@ -16,6 +16,7 @@ export type Database = {
     Tables: {
       consultation_bookings: {
         Row: {
+          assigned_to: string | null
           consent_privacy: boolean
           created_at: string
           email: string
@@ -28,11 +29,13 @@ export type Database = {
           reference: string
           slot_date: string
           slot_time: string
+          staff_notes: string
           status: string
           summary: string
           urgency: string | null
         }
         Insert: {
+          assigned_to?: string | null
           consent_privacy?: boolean
           created_at?: string
           email: string
@@ -45,11 +48,13 @@ export type Database = {
           reference: string
           slot_date: string
           slot_time: string
+          staff_notes?: string
           status?: string
           summary: string
           urgency?: string | null
         }
         Update: {
+          assigned_to?: string | null
           consent_privacy?: boolean
           created_at?: string
           email?: string
@@ -62,6 +67,7 @@ export type Database = {
           reference?: string
           slot_date?: string
           slot_time?: string
+          staff_notes?: string
           status?: string
           summary?: string
           urgency?: string | null
@@ -70,6 +76,7 @@ export type Database = {
       }
       enquiries: {
         Row: {
+          assigned_to: string | null
           consent_privacy: boolean
           created_at: string
           email: string
@@ -80,10 +87,12 @@ export type Database = {
           phone: string | null
           practice_area: string | null
           source: string
+          staff_notes: string
           status: string
           urgency: string | null
         }
         Insert: {
+          assigned_to?: string | null
           consent_privacy?: boolean
           created_at?: string
           email: string
@@ -94,10 +103,12 @@ export type Database = {
           phone?: string | null
           practice_area?: string | null
           source?: string
+          staff_notes?: string
           status?: string
           urgency?: string | null
         }
         Update: {
+          assigned_to?: string | null
           consent_privacy?: boolean
           created_at?: string
           email?: string
@@ -108,6 +119,7 @@ export type Database = {
           phone?: string | null
           practice_area?: string | null
           source?: string
+          staff_notes?: string
           status?: string
           urgency?: string | null
         }
@@ -140,6 +152,75 @@ export type Database = {
         }
         Relationships: []
       }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string
+          id: string
+          notification_preferences: Json
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string
+          id: string
+          notification_preferences?: Json
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string
+          id?: string
+          notification_preferences?: Json
+        }
+        Relationships: []
+      }
+      staff_activity: {
+        Row: {
+          action: string
+          actor_id: string | null
+          created_at: string
+          id: string
+          record_id: string
+          record_type: string
+        }
+        Insert: {
+          action: string
+          actor_id?: string | null
+          created_at?: string
+          id?: string
+          record_id: string
+          record_type: string
+        }
+        Update: {
+          action?: string
+          actor_id?: string | null
+          created_at?: string
+          id?: string
+          record_id?: string
+          record_type?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -152,9 +233,17 @@ export type Database = {
           slot_time: string
         }[]
       }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      is_staff: { Args: never; Returns: boolean }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "editor" | "assistant"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -281,6 +370,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "editor", "assistant"],
+    },
   },
 } as const
