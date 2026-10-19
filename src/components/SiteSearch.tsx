@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Search, X, CornerDownLeft, ArrowUp, ArrowDown, Clock, Scale, FileText, HelpCircle, ListChecks, Compass } from "lucide-react";
 import { searchSite, type SearchGroup, type SearchItem } from "@/data/searchIndex";
 import { cn } from "@/lib/utils";
+import { useArticles } from "@/hooks/use-articles";
 
 const GROUP_ORDER: SearchGroup[] = ["Pages", "Practice Areas", "Insights", "FAQs", "Checklists"];
 
@@ -25,6 +26,7 @@ interface SiteSearchProps {
 
 const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
   const navigate = useNavigate();
+  const { articles } = useArticles();
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
   const [recent, setRecent] = useState<string[]>([]);
@@ -56,7 +58,7 @@ const SiteSearch = ({ open, onOpenChange }: SiteSearchProps) => {
     };
   }, [open]);
 
-  const results = useMemo(() => searchSite(query), [query]);
+  const results = useMemo(() => searchSite(query, 24, articles), [query, articles]);
 
   const grouped = useMemo(() => {
     const map = new Map<SearchGroup, SearchItem[]>();

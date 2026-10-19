@@ -14,6 +14,65 @@ export type Database = {
   }
   public: {
     Tables: {
+      ai_access_state: {
+        Row: {
+          id: string
+          message: string | null
+          paused: boolean
+          status: number | null
+          updated_at: string
+        }
+        Insert: {
+          id: string
+          message?: string | null
+          paused?: boolean
+          status?: number | null
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          message?: string | null
+          paused?: boolean
+          status?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      article_revisions: {
+        Row: {
+          actor_id: string | null
+          article_id: string
+          created_at: string
+          id: string
+          snapshot: Json
+          version: number
+        }
+        Insert: {
+          actor_id?: string | null
+          article_id: string
+          created_at?: string
+          id?: string
+          snapshot: Json
+          version: number
+        }
+        Update: {
+          actor_id?: string | null
+          article_id?: string
+          created_at?: string
+          id?: string
+          snapshot?: Json
+          version?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "article_revisions_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       consultation_bookings: {
         Row: {
           assigned_to: string | null
@@ -71,6 +130,60 @@ export type Database = {
           status?: string
           summary?: string
           urgency?: string | null
+        }
+        Relationships: []
+      }
+      editorial_articles: {
+        Row: {
+          author_name: string
+          category: string
+          content: string
+          created_by: string | null
+          excerpt: string
+          id: string
+          meta_description: string
+          publish_at: string | null
+          published_at: string | null
+          review_notes: string
+          slug: string
+          status: string
+          title: string
+          updated_at: string
+          version: number
+        }
+        Insert: {
+          author_name?: string
+          category?: string
+          content?: string
+          created_by?: string | null
+          excerpt?: string
+          id?: string
+          meta_description?: string
+          publish_at?: string | null
+          published_at?: string | null
+          review_notes?: string
+          slug: string
+          status?: string
+          title?: string
+          updated_at?: string
+          version?: number
+        }
+        Update: {
+          author_name?: string
+          category?: string
+          content?: string
+          created_by?: string | null
+          excerpt?: string
+          id?: string
+          meta_description?: string
+          publish_at?: string | null
+          published_at?: string | null
+          review_notes?: string
+          slug?: string
+          status?: string
+          title?: string
+          updated_at?: string
+          version?: number
         }
         Relationships: []
       }
@@ -175,6 +288,59 @@ export type Database = {
           notification_preferences?: Json
         }
         Relationships: []
+      }
+      published_articles: {
+        Row: {
+          archived: boolean
+          author_name: string
+          category: string
+          content: string
+          excerpt: string
+          id: string
+          meta_description: string
+          published_at: string
+          slug: string
+          title: string
+          updated_at: string
+          visible_at: string
+        }
+        Insert: {
+          archived?: boolean
+          author_name: string
+          category: string
+          content: string
+          excerpt: string
+          id: string
+          meta_description: string
+          published_at: string
+          slug: string
+          title: string
+          updated_at: string
+          visible_at: string
+        }
+        Update: {
+          archived?: boolean
+          author_name?: string
+          category?: string
+          content?: string
+          excerpt?: string
+          id?: string
+          meta_description?: string
+          published_at?: string
+          slug?: string
+          title?: string
+          updated_at?: string
+          visible_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "published_articles_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "editorial_articles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       staff_activity: {
         Row: {

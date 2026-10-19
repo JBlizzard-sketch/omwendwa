@@ -15,6 +15,13 @@
       "when": 1792109931071,
       "tag": "0001_staff_workspace_access",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792405156796,
+      "tag": "0002_protected_editorial_publishing",
+      "breakpoints": true
     }
   ]
 }

@@ -9,6 +9,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import SeriesStrip from "@/components/SeriesStrip";
 import { breadcrumbSchema, itemListSchema } from "@/lib/structuredData";
 import { trackEvent } from "@/lib/analytics";
+import { useArticles } from "@/hooks/use-articles";
 import {
   POSTS_PER_PAGE,
   categoryFromSlug,
@@ -22,22 +23,23 @@ const Insights = () => {
   const { categorySlug: slugParam } = useParams();
   const [params, setParams] = useSearchParams();
   const [search, setSearch] = useState("");
+  const { articles } = useArticles();
 
   const activeCategory = slugParam ? categoryFromSlug(slugParam) : undefined;
-  const categories = categoryList();
+  const categories = categoryList(articles);
 
   const basePath = activeCategory ? `/insights/category/${categorySlug(activeCategory)}` : "/insights";
   const page = Number(params.get("page") ?? 1) || 1;
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return sortedPosts().filter((post) => {
+    return sortedPosts(articles).filter((post) => {
       const matchesCategory = !activeCategory || post.category === activeCategory;
       const matchesSearch =
         !q || post.title.toLowerCase().includes(q) || post.excerpt.toLowerCase().includes(q);
       return matchesCategory && matchesSearch;
     });
-  }, [activeCategory, search]);
+  }, [activeCategory, search, articles]);
 
   const { items, current, totalPages } = paginate(filtered, search ? 1 : page, POSTS_PER_PAGE);
 
@@ -57,7 +59,7 @@ const Insights = () => {
     ? `${activeCategory} — Kenyan Law Articles${current > 1 ? ` (Page ${current})` : ""}`
     : `Legal Insights — Kenyan Law Blog & Commentary${current > 1 ? ` (Page ${current})` : ""}`;
   const description = activeCategory
-    ? categories.find((c) => c.name === activeCategory)!.description
+    ? categories.find((c) => c.name === activeCategory)?.description ?? "Kenyan law articles from the firm."
     : "Expert legal analysis and commentary on Kenyan law: tax updates, succession planning, commercial disputes, employment, family law and land rights.";
 
   return (

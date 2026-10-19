@@ -8,10 +8,12 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 import TalkToPartnerCTA from "@/components/TalkToPartnerCTA";
 import { Button } from "@/components/ui/button";
 import { seriesById, seriesPosts, series as allSeries } from "@/data/series";
+import { useArticles } from "@/hooks/use-articles";
 
 const Series = () => {
   const { seriesId } = useParams();
   const current = seriesById(seriesId);
+  const { articles } = useArticles();
 
   if (!current) {
     return (
@@ -26,7 +28,7 @@ const Series = () => {
     );
   }
 
-  const posts = seriesPosts(current);
+  const posts = seriesPosts(current, articles);
   const others = allSeries.filter((s) => s.id !== current.id);
 
   return (
