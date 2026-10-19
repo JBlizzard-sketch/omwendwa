@@ -3,7 +3,8 @@ import { ArrowLeft, ArrowRight, BookOpen, Calendar, Clock } from "lucide-react";
 import { findSeriesForPost, seriesPosts } from "@/data/series";
 import SEOHead from "@/components/SEOHead";
 import ScrollReveal from "@/components/ScrollReveal";
-import { blogPosts } from "@/data/blogPosts";
+import { useArticles } from "@/hooks/use-articles";
+import ReactMarkdown from "react-markdown";
 import { Button } from "@/components/ui/button";
 import ReadingProgress from "@/components/ReadingProgress";
 import SocialShare from "@/components/SocialShare";
@@ -19,6 +20,7 @@ export const LAST_REVIEWED = CONTENT_REVIEWED;
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const { articles: blogPosts, isLoading } = useArticles();
   const post = blogPosts.find((p) => p.slug === slug);
 
   // Category-aware related posts: same category first, then most-recent from other categories
@@ -32,11 +34,12 @@ const BlogPost = () => {
   const otherPosts = [...sameCategory, ...otherCategory].slice(0, 3);
 
   const seriesInfo = slug ? findSeriesForPost(slug) : null;
-  const partsInSeries = seriesInfo ? seriesPosts(seriesInfo.series) : [];
+  const partsInSeries = seriesInfo ? seriesPosts(seriesInfo.series, blogPosts) : [];
   const nextInSeries = seriesInfo ? partsInSeries[seriesInfo.index + 1] : undefined;
   const prevInSeries = seriesInfo && seriesInfo.index > 0 ? partsInSeries[seriesInfo.index - 1] : undefined;
 
 
+  if (!post && isLoading) return <p role="status" className="p-20">Loading article…</p>;
   if (!post) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background pt-20">
@@ -103,7 +106,7 @@ const BlogPost = () => {
             description: post.metaDescription,
             path: `/insights/${post.slug}`,
             datePublished: post.date,
-            dateModified: LAST_REVIEWED,
+            dateModified: post.modified ?? LAST_REVIEWED,
             section: post.category,
             keywords: [post.category, "Kenyan law", "Nairobi advocates", post.title],
             wordCount: post.content.split(/\s+/).length,
@@ -150,14 +153,14 @@ const BlogPost = () => {
               <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1"><Calendar className="h-4 w-4" /> {post.date}</span>
                 <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {post.readTime}</span>
-                <span>Reviewed {LAST_REVIEWED}</span>
+                <span>Updated {post.modified ?? LAST_REVIEWED}</span>
               </div>
               <p className="article-summary mt-6 rounded-xl border border-border bg-card/70 p-5 text-base leading-relaxed text-foreground">
                 <strong className="font-semibold">In short:</strong> {post.excerpt}
               </p>
             </ScrollReveal>
 
-            <AuthorByline category={post.category} />
+            {post.author && post.author !== "Rachel Mwendwa" ? <p className="mt-5 text-sm text-muted-foreground">By {post.author}</p> : <AuthorByline category={post.category} />}
 
             {seriesInfo && (
               <div className="mt-6 rounded-xl border border-primary/25 bg-primary/5 p-5">
@@ -202,7 +205,7 @@ const BlogPost = () => {
 
             <ScrollReveal delay={0.1}>
               <div className="mt-10 border-t border-border pt-10">
-                {renderContent(post.content)}
+                <div className="prose prose-plum max-w-none text-foreground"><ReactMarkdown>{post.content}</ReactMarkdown></div>
               </div>
             </ScrollReveal>
 

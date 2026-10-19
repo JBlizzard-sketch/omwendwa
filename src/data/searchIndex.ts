@@ -75,12 +75,12 @@ export const searchIndex: SearchItem[] = [
 
 const normalise = (value: string) => value.toLowerCase().replace(/[^a-z0-9\s]/g, " ");
 
-export function searchSite(query: string, limit = 24): SearchItem[] {
+export function searchSite(query: string, limit = 24, posts = blogPosts): SearchItem[] {
   const q = normalise(query).trim();
   if (!q) return [];
   const terms = q.split(/\s+/).filter(Boolean);
 
-  return searchIndex
+  return [...searchIndex.filter(item => item.group !== "Insights"), ...posts.map(post => ({ id: `post-${post.slug}`, group: "Insights" as const, title: post.title, subtitle: `${post.category} · ${post.readTime}`, href: `/insights/${post.slug}`, keywords: `${post.excerpt} ${post.category} ${post.metaDescription}` }))]
     .map((item) => {
       const title = normalise(item.title);
       const haystack = normalise(`${item.title} ${item.subtitle ?? ""} ${item.keywords}`);

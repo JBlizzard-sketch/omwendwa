@@ -26,17 +26,17 @@ const descriptions: Record<string, string> = {
     "Breakdowns of decided Kenyan cases and what the reasoning means for similar disputes.",
 };
 
-export const categoryList = (): CategoryMeta[] =>
+export const categoryList = (posts = blogPosts): CategoryMeta[] =>
   blogCategories
     .filter((c) => c !== "All")
     .map((name) => ({
       name,
       slug: categorySlug(name),
-      count: blogPosts.filter((p) => p.category === name).length,
+      count: posts.filter((p) => p.category === name).length,
       description: descriptions[name] ?? `Articles on ${name} from O. Mwendwa & Company Advocates.`,
     }));
 
-export const sortedPosts = () => [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
+export const sortedPosts = (posts = blogPosts) => [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));
 
 export const paginate = <T,>(items: T[], page: number, perPage = POSTS_PER_PAGE) => {
   const totalPages = Math.max(1, Math.ceil(items.length / perPage));

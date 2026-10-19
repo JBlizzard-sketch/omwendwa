@@ -49,8 +49,8 @@ export const series: Series[] = [
 
 const bySlug = new Map(blogPosts.map((p) => [p.slug, p]));
 
-export const seriesPosts = (s: Series): BlogPost[] =>
-  s.postSlugs.map((slug) => bySlug.get(slug)).filter((p): p is BlogPost => Boolean(p));
+export const seriesPosts = (s: Series, posts = blogPosts): BlogPost[] =>
+  s.postSlugs.map((slug) => posts.find(p => p.slug === slug)).filter((p): p is BlogPost => Boolean(p));
 
 export const seriesById = (id?: string) => series.find((s) => s.id === id);
 
