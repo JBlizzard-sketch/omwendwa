@@ -4,6 +4,6 @@
 - [ ] Activate Rachel's first staff account at ochielmwendwa@gmail.com: owner must send an invitation from More → Users → Add user; then assign the protected administrator role and verify signed-in record changes.
 - [ ] App emails: blocked until the firm's owned sender domain is configured.
 - [ ] SEO workspace: Search Console connection, cached reports, referral and conversion trends.
-- [ ] Editorial workspace: implement protected drafts, review, scheduling, archiving, immutable article addresses and revision history; verify staff access.
-- [ ] Kenyan-law assistant: stream explanations grounded only in published firm articles, with source links and advice limits; verify a live question.
+- [ ] Editorial workspace: protected drafts, review, approval, scheduled public snapshots, archiving and immutable revisions implemented; signed-in verification blocked until Rachel's invited account exists.
+- [ ] Kenyan-law assistant: streaming follow-up conversation, published article retrieval and advice limits implemented; deployment and live question verification in progress.
 - [ ] Client portal, private documents, payments and retention controls in subsequent phases.
