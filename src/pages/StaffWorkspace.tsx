@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { CalendarDays, Inbox, LogOut, RefreshCw, ShieldCheck, UserRound } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import SEOHead from "@/components/SEOHead";
+import { canEditArticles } from "@/lib/editorialRules";
 
 type RecordRow = Tables<"enquiries"> | Tables<"consultation_bookings">;
 
@@ -94,6 +95,7 @@ export default function StaffWorkspace() {
   if (!permitted) return <section className="max-w-lg mx-auto px-6 py-20"><SEOHead title="Staff access" description="Private staff access." noindex /><ShieldCheck className="text-primary mb-5" /><h1 className="text-4xl mb-4">Access not assigned</h1><p className="text-muted-foreground mb-6">{staff.error || "This account has no staff role. Ask the firm's administrator to activate your invitation."}</p><Button onClick={() => void signOut()}><LogOut />Sign out</Button></section>;
   return <section className="max-w-6xl mx-auto px-5 py-12">
     <SEOHead title="Private staff workspace" description="Protected enquiries and consultation records." noindex />
+    {canEditArticles(staff.roles) && <Button asChild variant="outline" className="mb-6"><Link to="/staff/articles">Article publishing</Link></Button>}
     <div className="flex justify-between flex-wrap gap-5 border-b pb-7 mb-7"><div><p className="text-sm text-primary mb-2">O. Mwendwa & Company Advocates</p><h1 className="text-4xl">{displayName ? `Welcome, ${displayName}` : "Firm workspace"}</h1><p className="text-sm text-muted-foreground mt-3 capitalize">{staff.roles.join(" · ")}</p></div><div className="flex gap-2"><Button variant="outline" title="Refresh records" aria-label="Refresh records" size="icon" onClick={() => setRevision(r => r + 1)}><RefreshCw /></Button><Button variant="outline" onClick={() => void signOut()}><LogOut />Sign out</Button></div></div>
     <Tabs defaultValue="enquiries" onValueChange={() => setFilter("all")}>
       <TabsList className="h-auto flex flex-wrap justify-start gap-1 mb-6"><TabsTrigger value="enquiries"><Inbox className="h-4 w-4 mr-2" />Enquiries</TabsTrigger><TabsTrigger value="bookings"><CalendarDays className="h-4 w-4 mr-2" />Bookings</TabsTrigger>{isAdmin && <TabsTrigger value="activity"><ShieldCheck className="h-4 w-4 mr-2" />Activity</TabsTrigger>}<TabsTrigger value="profile"><UserRound className="h-4 w-4 mr-2" />My profile</TabsTrigger></TabsList>
