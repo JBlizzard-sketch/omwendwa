@@ -392,6 +392,13 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      article_public_index: {
+        Args: never
+        Returns: {
+          archived: boolean
+          slug: string
+        }[]
+      }
       get_taken_slots: {
         Args: { _from: string; _to: string }
         Returns: {
