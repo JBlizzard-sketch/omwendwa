@@ -35,6 +35,8 @@ import NotFound from "./pages/NotFound";
 import StaffLogin from "./pages/StaffLogin";
 import StaffWorkspace from "./pages/StaffWorkspace";
 import ResetPassword from "./pages/ResetPassword";
+import StaffArticles from "./pages/StaffArticles";
+import LegalAssistant from "./pages/LegalAssistant";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -69,6 +71,8 @@ const AnimatedRoutes = () => {
         <Route path="/diagnostics" element={<PageTransition><Diagnostics /></PageTransition>} />
         <Route path="/staff/login" element={<StaffLogin />} />
         <Route path="/staff" element={<StaffWorkspace />} />
+        <Route path="/staff/articles" element={<StaffArticles />} />
+        <Route path="/legal-assistant" element={<PageTransition><LegalAssistant /></PageTransition>} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
